@@ -1,0 +1,85 @@
+﻿<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="Services/heros-service.html">
+<link rel="import" href="heros-card.html">
+
+<polymer-element name="heros-list" attributes="nom filter debug">
+  <template>
+    <style>
+    :host {
+      display: block;
+    }
+    heros-card {
+      margin-right: 10px;
+    }
+    </style>
+    
+    <!-- add markup here -->
+    <heros-service id="service" filter="{{filter}}" heroes="{{heroes}}" debug="{{debug}}" nom="{{nom}}"></heros-service>
+    <div layout horizontal center>
+	  <template repeat="{{heros in heroes}}">
+	  <heros-card
+		nom="{{heros.uid}}"
+		debug=false
+		on-img-tap="{{imgTapped}}">
+		  <img src="{{heros.img}}" width="70" height="105">
+		  <h2>{{heros.nom}}</h2>
+		</heros-card>
+	  </template>
+</div>
+  </template>
+
+  <script>
+Polymer({
+	publish: {
+		nom: {
+			reflect: true
+		},
+		debug: {
+			reflect: true
+		},
+		filter: {
+			reflect: true
+		}
+	},
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-list : created("+this.getAttribute("nom")+")");
+		}
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-list : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-list : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-list : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-list : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-list : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+	},
+	imgTapped: function(event, detail, sender) {
+		var heros = sender.getAttribute("nom");
+		if(this.getAttribute("debug") == "true") {
+			console.log("imgTapped : ("+heros+")");
+		}
+		//this.$.service.remHeros(heros);
+		//this.fire("heros-add");
+	}
+});
+  </script>
+
+</polymer-element>

@@ -1,0 +1,9 @@
+Type :
+Tank : Protege une cible
+Protection : Protege l'equipe
+Amelioration : Augmente les degats
+Degat : Degat direct
+Destruction : Detruit des couleurs
+Piége : Dégat décalés dans le temps
+Soin : Soigne l'equipe
+Paralysie : Paralyse

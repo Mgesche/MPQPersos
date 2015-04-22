@@ -1,0 +1,70 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="Services/heros-service.html">
+
+<polymer-element name="heros-choix" attributes="nom debug filter">
+  <template>
+    <style>
+    :host {
+      display: block;
+    }
+    </style>
+    
+    <!-- add markup here -->
+    <heros-service id="service" filter="{{filter}}" heroes="{{heroes}}"></heros-service>
+	<!--<paper-dropdown-menu>
+        <template repeat="{{heros in heroes}}">
+			<paper-item label="{{heros.nom}}"></paper-item>
+        </template>
+    </paper-dropdown-menu>-->
+	<SELECT>
+		<template repeat="{{heros in heroes}}">
+			<OPTION value="{{heros.uid}}">{{heros.nom}}</option>
+		</template>
+	</SELECT>
+	
+  </template>
+
+  <script>
+Polymer({
+	publish: {
+		nom: {
+			reflect: true
+		},
+		debug: {
+			reflect: true
+		}
+	},
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-choix : created("+this.getAttribute("nom")+")");
+		}
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-choix : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-choix : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-choix : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-choix : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-choix : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+	}
+});
+  </script>
+
+</polymer-element>

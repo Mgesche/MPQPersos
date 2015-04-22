@@ -1,0 +1,1424 @@
+[
+  {
+    "uid": "4_Invisible_Woman",
+	"nom": "Invisible Woman",
+    "img": "http://vignette1.wikia.nocookie.net/marvelpuzzlequest/images/f/f7/Black_Panther_%28T%27Challa%29.png/revision/latest/scale-to-width/260?cb=20141002161330",
+    "puissance" : 4,
+	"description" : "A founding member of The Fantastic Four, Sue Richards is a true leader and fiercely loyal to those she cares about. The magnitude of Invisible Woman's psionic power is legendary.",
+	"attaques" : [
+		{
+			"nom" : "Grant Invisibility",
+			"couleur" : "Jaune",
+			"description" : "The Invisible Woman hides the weakest member of the team. Converts a random basic Yellow tile into an Invisibility tile. While it's on the board, the invisible character can't be targeted.",
+			"cout" : 14,
+			"type" : "Tank"
+		},
+		{
+			"nom" : "Force Bubbles",
+			"couleur" : "Bleu",
+			"description" : "Susan focuses her power to lock the enemy down and save the team. Locks 2 chosen tiles in Force Bubbles before creating a Blue Protect tile with a strength of 91.",
+			"cout" : 13,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Force Field Crush",
+			"couleur" : "Vert",
+			"description" : "Invisible Woman shatters a 3x3 area around 1 random Force Bubble, dealing 91 damage and unlocking but not destroying it. If there are no Force Bubbles on the board, she creates 1 in a random location. This ability ends the turn.",
+			"cout" : 9,
+			"type" : "Destruction"
+		}]
+			
+  },
+  {
+    "uid": "4_Nick_Fury",
+	"nom": "Nick Fury",
+    "img": "../img/Nick_Fury_(Director_of_SHIELD).png",
+    "puissance" : 4,
+	"description" : "Nick Fury, Jr. followed in his father's footsteps to become Director of S.H.I.E.L.D. Raised Marcus Johnson, he inherited the benefits of the Infinity Formula, slowing his aging and accelerating his healing. Director Fury is a worthy combatant due to his military training and relentless physical conditioning. What makes him truly formidable is his executive access to the technology, operatives, intelligence, and affiliations of S.H.I.E.L.D.",
+	"attaques" : [
+		{
+			"nom" : "Avengers Assemble!",
+			"couleur" : "Jaune",
+			"description" : "With the world in peril, Director Fury summons Earth's Mightiest Heroes.The Sentinel of Liberty, Captain America, is first on the scene.",
+			"cout" : 12,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Demolition",
+			"couleur" : "Bleu",
+			"description" : "Fury directs his agents to set traps at reported enemy locations. Creates 2 trap tiles that, when matched by the enemy, detonate in unison dealing 758 damage each (but not generating AP). IF you match a trap it detonates dealing 379 damage. Enemies cannot see the trap.",
+			"cout" : 10,
+			"type" : "Piege"
+		},
+		{
+			"nom" : "Escape Plan",
+			"couleur" : "Violet",
+			"description" : "Enemy intel stolen, Nick Fury leads his team to safety.Deals 457 damage and creates a 3 turn Countdown tile that, when activated, steals 3 AP from the enemy's strongest color before converting to a strength 91 Strike tile.",
+			"cout" : 12,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "4_Wolverine",
+	"nom": "Wolverine",
+    "img": "../img/260px-Wolverine_(X-Force).png",
+    "puissance" : 4,
+	"description" : "X-Force does what needs doing to protect mutantkind when no one else will. Master hunter Wolverine leads the X-Men's secret assassination squad.",
+	"attaques" : [
+		{
+			"nom" : "X-Force",
+			"couleur" : "Vert",
+			"description" : "Wolverine unleashes his berserker rage, cutting with his adamantium claws. Deals 164 damage and destroys 5 tiles in a 3x3 X-shaped pattern. Does not generate AP.",
+			"cout" : 8,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Surgical Strike",
+			"couleur" : "Noir",
+			"description" : "Wolverine attacks with ruthless precision, crippling his enemy's ability to retaliate. Destroys every tile in the enemy team's strongest color, dealing 32 damage per tile. Does not generate AP.",
+			"cout" : 11,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Recovery",
+			"couleur" : "Jaune",
+			"description" : "Wolverine's healing factor repairs his wounds, and he ferociously lashes out if interrupted. Places a 3-turn Yellow Countdown tile that heals for 1187 damage when activated. If the Countdown tile is matched, Wolverine destroys 6 random tiles, dealing 32 damage per tile. Does not generate AP.",
+			"cout" : 9,
+			"type" : "Soin"
+		}]
+  },
+  {
+    "uid": "3_Beast",
+	"nom": "Beast",
+    "img": "../img/260px-Beast_(Classic).png",
+    "puissance" : 3,
+	"description" : "Hank McCoy was born with unusually large hands and feet - along with an incredible intelligence and curiosity. When Professor Charles Xavier offered him a place with his X-Men, he welcomed it and became the team's chief doctor and scientist as Beast.",
+	"attaques" : [
+		{
+			"nom" : "Mutagenic Breakthrough",
+			"couleur" : "Bleu",
+			"description" : "Hank has big plans for a genetic experiment that might lead to unpredictable results. Creates a 3 turn Blue Countdown tile that, when activated, converts 4 surrounding basic tiles into random special tiles with strength 22.",
+			"cout" : 8,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Animal Inside",
+			"couleur" : "Vert",
+			"description" : "Jumping and slashing as he moves through enemies, Hank can barely control his animal side. Deals 137 damage to all enemies. If there's a friendly Blue special tile on the board, Beast smashes up his lab destroying 3 random tiles, each dealing 33 to all enemies but not generating AP.",
+			"cout" : 9,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Medical Marvel",
+			"couleur" : "Jaune",
+			"description" : "Dr. McCoy uses his medical triage skills to patch up the team before they rush back into battle. Gives a burst of 274 health to allies. If there's a friendly Blue special tile on the board, he provides a gadget to aid them. 1 Yellow tile becomes a strength 16 Protect tile.",
+			"cout" : 11,
+			"type" : "Protection"
+		}]
+  },
+  {
+    "uid": "3_Black_Panther",
+	"nom": "Black Panther",
+    "img": "../img/260px-Black_Panther_(Man_Without_Fear).png",
+    "puissance" : 3,
+	"description" : "After becoming chief of the Panther Tribe and king of Wakanda, Man Without Fear assumed the traditional title of Black Panther. Through the consumption of a unique herb and a link to the Panther God, his physical ability is greatly enhanced. This gift, combined with a brilliant mind and access to amazing Wakandan technology, make Man Without Fear a powerful ally and daunting opponent.",
+	"attaques" : [
+		{
+			"nom" : "Battleplan",
+			"couleur" : "Jaune",
+			"description" : "T'Challa uses his expert strategic mind to give his allies a tactical advantage. Converts 3 basic Yellow tiles to strength 22 Strike tiles. If the team has 12 or more Team-Up AP, converts 3 basic Yellow tiles to strength 33 Strike tiles instead.",
+			"cout" : 9,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Defense Grid",
+			"couleur" : "Bleu",
+			"description" : "Man Without Fear deploys Vibranium-based Wakandan technology to slow the enemy assault. Places a Blue Countdown tile that converts a basic color tile to a strength 9 Protect tile every 2 turns. if 3 or more Protect tiles are in play, conversion is suspended.",
+			"cout" : 8,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Rage of the Panther",
+			"couleur" : "Noir",
+			"description" : "Prideful Black Panther pounces, ravaging his opponents but provoking retaliation. Deals 194 damage to each enemy, but the enemy team gains 5 AP in their strongest color.",
+			"cout" : 12,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "3_Black_Widow",
+	"nom": "Black Widow",
+    "img": "../img/260px-Black_Widow_(Grey_Suit).png",
+    "puissance" : 3,
+	"description" : "The Russian equivalent of Captain America's Super Soldier Serum enhanced Black Widow's agility, strength, and endurance. An expert marksman and master tactician, she has led the Avengers into battle on multiple occasions.",
+	"attaques" : [
+		{
+			"nom" : "Sniper Rifle",
+			"couleur" : "Vert",
+			"description" : "Black Widow uses an accurate, long range rifle to shoot a location on the board, clearing a reticle shaped pattern. She deals damage for each tile destroyed and an additional 355 damage to the current target, but does not generate AP.",
+			"cout" : 19,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Pistol",
+			"couleur" : "Rouge",
+			"description" : "Black Widow fires 1 shots at the board, clearing a block of tiles, dealing damage for each tile and an additional 118 damage to the current target. Does not generate AP.",
+			"cout" : 12,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Deceptive Tactics",
+			"couleur" : "Violet",
+			"description" : "Black Widow eliminates potential enemy assets while preparing her own attack. Converts 2 basic color tiles (except for Green) into Green tiles.",
+			"cout" : 11,
+			"type" : "Ressources"
+		}]
+  },
+  {
+    "uid": "3_Captain_America",
+	"nom": "Capt America",
+    "img": "../img/Captain_America_(Steve_Rogers).png",
+    "puissance" : 3,
+	"description" : "Once again Steve Rogers dons the stars and stripes, prepared to fight those that would subvert liberty and freedom. To combat evil, Captain America has re-equipped with a shield made of  pure energy. Villains are about to find out that an avenging Super Soldier is bad news for business.",
+	"attaques" : [
+		{
+			"nom" : "Sentinel of Liberty",
+			"couleur" : "Jaune",
+			"description" : "Captain America courageously rushes to protect the team's flank. Transforms 3 basic chosen tiles into yellow protect tiles, each with a strength of 24.",
+			"cout" : 19,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Star-Spangled Avenger",
+			"couleur" : "Rouge",
+			"description" : "The Captain hurls his trusty shield into battle. Hits the target for 95 damage and transforms a chosen basic tile into a 3 turn Countdown tile that returns 8 Red AP.",
+			"cout" : 11,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Peacemaker",
+			"couleur" : "Bleu",
+			"description" : "Captain America gallantly launches his shield at the enemy. Stuns the target for 2 turns and transforms a chosen basic tile into a 3 turn Countdown tile that returns 8 Blue AP.",
+			"cout" : 12,
+			"type" : "Paralysie"
+		}]
+  },
+  {
+    "uid": "3_Captain_Marvel",
+	"nom": "Captain Marvel",
+    "img": "../img/260px-Captain_Marvel_(Modern).png",
+    "puissance" : 3,
+	"description" : "After an alien device exploded, melding her genetic make-up with that of the Kree hero Mar-Vell, US Air-Force Captain Carol Danvers used her new-found abilities to fight for justice as Captain Marvel! Captain Marvel spent time touring the stars with the X-Men, eventually becoming a member of The Avengers, where her energy manipulation powers, military mind and love of a good fight make her the equal of any of Earth's Mightiest Heroes.",
+	"attaques" : [
+		{
+			"nom" : "Photonic Blasts",
+			"couleur" : "Rouge",
+			"description" : "Captain Marvel unleashes the amazing cosmic power of her photonic blasts, shattering her enemy's defenses. Deals 208 Damage and destroys up to 2 Enemy Protect tiles. Does not generate AP.",
+			"cout" : 7,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Hypersonic Punch",
+			"couleur" : "Noir",
+			"description" : "Captain Marvel flies headlong into battle, striking her target with enough force to send them reeling. However, the direct attack leaves Carol open to retaliation. Deals 351 Damage and stuns her target for 1 turn. Then places a strength 22 Enemy Strike tile.",
+			"cout" : 9,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Energy Absorption",
+			"couleur" : "Jaune",
+			"description" : "(PASSIVE) Captain Marvel uses her energy-absorbing abilities to take in her enemy's attack and power up her next assault. When Captain Marvel takes greater than 274 damage, she generates 3 Red AP.",
+			"cout" : 0,
+			"type" : "Ressources"
+		}]
+  },
+  {
+    "uid": "3_Colossus",
+	"nom": "Colossus",
+    "img": "../img/260px-Colossus_(Classic).png",
+    "puissance" : 3,
+	"description" : "Physically powerful but with a gentle heart, Piotr Rasputin only ever wanted a peaceful, honest life as an artist. His unique mutant ability to transform his flesh into organic steel led to his induction into the X-Men, and he vowed that he would use his powers for the betterment of all human and mutant-kind.",
+	"attaques" : [
+		{
+			"nom" : "Immovable Object",
+			"couleur" : "Jaune",
+			"description" : "Colossus protects his team by standing in front of any force that comes their way. Turns a chosen basic Yellow tile into a 3 turn Countdown tile. While active, Colossus moves to the front at the end of a turn, and resists 25% of the damage dealt to him.",
+			"cout" : 8,
+			"type" : "Tank"
+		},
+		{
+			"nom" : "Colossal Punch",
+			"couleur" : "Rouge",
+			"description" : "Using the incredible power of his organic steel fists, Colossus pummels the enemy. Deals 493 damage. If Colossus is already in front, he deals an additional 164 damage.",
+			"cout" : 11,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Fastball Special",
+			"couleur" : "Noir",
+			"description" : "Colossus pitches a teammate into the sky and toward the fray! Sends a chosen teammate Airborne (inactive, but immune to damage) for 3 turns. Upon landing, they activate one power at no cost, then take 274 damage. The enemy target takes 274 damage.",
+			"cout" : 13,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "3_Daken",
+	"nom": "Daken",
+    "img": "../img/260px-Daken_(Classic).png",
+    "puissance" : 3,
+	"description" : "With his mutant healing factor, heightened senses and retractable claws, Daken is clearly his father's son. Saved from his dying mother's womb, killer of his adoptive family, and addicted to the hallucinogenic drug Heat... This apple has fallen far from the tree.",
+	"attaques" : [
+		{
+			"nom" : "Pheromone Rage",
+			"couleur" : "Violet",
+			"description" : "(PASSIVE) Daken releases a scent that sets his enemies on edge, using their anger to his advantage. Whenever anyone makes a Green match, add a Red Strike tile to the board with a strength of 11.",
+			"cout" : 0,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Healing & Heat",
+			"couleur" : "Noir",
+			"description" : "(PASSIVE) Daken's healing factor allows himself to recover 3% of his health every turn. If there are fewer than 9 blue tiles, the terrible drug 'Heat' kicks in, and he loses 3% of his health instead.",
+			"cout" : 0,
+			"type" : "Soin"
+		},
+		{
+			"nom" : "Chemical Reaction",
+			"couleur" : "Bleu",
+			"description" : "Daken springs a trap, but his addiction to 'Heat' threatens to push him over the edge. Damages the target for 99, converts 2 Blue tiles to Green, and converts up to 2 friendly Strike tiles to basic tiles, doing 50 damage per Strike tile converted.",
+			"cout" : 5,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "3_Daredevil",
+	"nom": "Daredevil",
+    "img": "../img/260px-Daredevil_(Classic).png",
+    "puissance" : 3,
+	"description" : "Matthew Murdock grew up in the rough-and-tumble neighborhood of Hell's Kitchen. Blinded by radioactive waste while saving a man's life, his other senses improved to superhuman level. After the senseless murder of his father, Murdock devised a new identity with which to track down and punish his killers. Daredevil prowls the city streets, protecting the innocent, and terrifying those that would do evil.",
+	"attaques" : [
+		{
+			"nom" : "Radar Sense",
+			"couleur" : "Violet",
+			"description" : "Daredevil's heightened senses let him strike first, terrifying the enemy. Creates an Environment Trap tile that, when matched by an enemy, steals 2 AP from all colors. If you match the tile, it steals 1 Purple AP and changes locations. Enemies cannot see the tile.",
+			"cout" : 11,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Equalizer",
+			"couleur" : "Bleu",
+			"description" : "Billy Club in hand, Daredevil prowls the battlefield, waiting to even the odds. Create a Blue trap tile that, when matched by an enemy, stuns for 2 turns. if you match the tile, it generates 1 Blue AP and changes locations. Enemies cannot see the tile",
+			"cout" : 7,
+			"type" : "Paralysie"
+		},
+		{
+			"nom" : "Ambush",
+			"couleur" : "Rouge",
+			"description" : "Daredevil lurks in the shadow, ready to strike. Creates a Red Trap tile that, when matched by the enemy, deals 473 damage. If you match the tile, the enemy takes 24 damage and it changes locations. Enemies cannot see the tile.",
+			"cout" : 7,
+			"type" : "Piege"
+		}]
+  },
+  {
+    "uid": "3_Deadpool",
+	"nom": "Deadpool",
+    "img": "../img/260px-Deadpool_(Its_Me,_Deadpool!).png",
+    "puissance" : 3,
+	"description" : "Deadpool here! Welcome to my game! Yeah, I know a bunch of other jerks are in it, but really it's all about the Merc With A Mouth. I was just some regular dope until the Weapon X program took me in, gave me a sweet Healing Factor and made me the deadly assassin Adonis you see before you. I like long walks on the beach, all the chimichangas I can get, and video games where you have to match three things together for some reason.",
+	"attaques" : [
+		{
+			"nom" : "A Little Off the Top",
+			"couleur" : "Rouge",
+			"description" : "All these suckers are punching each other all over, when I go right to the source - their health bars! I'll slice the enemy's health bar with my sweet ninja-swords, dealing 25% of their current health in damage (maximum 400 damage).",
+			"cout" : 6,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "WHALES! WHALES! WHALES!",
+			"couleur" : "Violet",
+			"description" : "You've gotta help me get rid of all these whales (don't ask) before they go bad! I'll hit the enemy team with a Beluga, dealing 493 damage, but if you spend your Deadpool Points (the Money With The Mouth) I'll hit 'em with every whale I've got. I'm practically giving these whales away!",
+			"cout" : 14,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Life of the Party",
+			"couleur" : "Noir",
+			"description" : "Everyone should be paying more attention to me! If a character with less health than me would take 274 or more damage, I'll hop into the spotlight, taking the attack. Don't worry, my awesome Healing Factor then places a Black Countdown tile that'll restore 148 health to me when it goes off.",
+			"cout" : 0,
+			"type" : "Tank"
+		}]
+  },
+  {
+    "uid": "3_Doctor_Doom",
+	"nom": "Doctor Doom",
+    "img": "../img/260px-Doctor_Doom_(Classic).png",
+    "puissance" : 3,
+	"description" : "Victor Von Doom never actually earned his doctorate. Jealous of Reed Richards' multiple advanced degrees, he requires his Latverian subjects to use the title under penalty of death.",
+	"attaques" : [
+		{
+			"nom" : "Summon Demons",
+			"couleur" : "Noir",
+			"description" : "Doctor Doom summons a cadre of demonic creatures, replacing 2 basic Red tiles with Attack tiles.",
+			"cout" : 12,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Technopathic Strike",
+			"couleur" : "Bleu",
+			"description" : "Doctor Doom lashes out with his sinister inventions, swaying the battle in his favor. Transforms 6 basic Blue tiles to Black tiles.",
+			"cout" : 9,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Violet",
+			"description" : "Aucune attaque",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "3_Falcon",
+	"nom": "Falcon",
+    "img": "../img/Falcon_(Mighty_Avengers).png",
+    "puissance" : 3,
+	"description" : "nspired by his eventual friend and partner Captain America, Sam Wilson gave up a life of crime to become the heroic Falcon. With his Wakandan flight harness and psychic link with birds (like his constant companion Redwing) the Falcon bolsters the spirits of all who call him an ally.",
+	"attaques" : [
+		{
+			"nom" : "Inspiration",
+			"couleur" : "Jaune",
+			"description" : "(Passive) Falcon spreads his wings, motivating his teammates as he swoops into the fight. When the team makes a yellow match, Falcon improves the strength of 2 friendly Protect, Strike, or Attack tiles by 7.",
+			"cout" : 0,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Redwing",
+			"couleur" : "Bleu",
+			"description" : "(Passive) Falcon's companion Redwing soars overhead, alerting Falcon to danger. if the team has at least 8 Blue AP, Redwing converts an Enemy Protect or Strike tile into a 4 turn Countdown tile that signals when Redwing will return.",
+			"cout" : 0,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Bird Strike",
+			"couleur" : "Violet",
+			"description" : "Falcon summons a massive flock of birds to swarm the battlefield, obscuring his team's position. Creates 9 Protect tiles with strength of 5.",
+			"cout" : 12,
+			"type" : "Protection"
+		}]
+  },
+  {
+    "uid": "3_The_Hood",
+	"nom": "The Hood",
+    "img": "../img/260px-The_Hood_(Classic).png",
+    "puissance" : 3,
+	"description" : "Parker Robbins was just trying to steal enough to afford good medical care for his mom. Then he shot a demon and took its cloak. Turns out the cloak was a conduit for Dormammu, The Dread One. Reluctantly using Dormammu's help, Robbins has assembled the largest empire of super-criminals in history.",
+	"attaques" : [
+		{
+			"nom" : "Twin Pistols",
+			"couleur" : "Jaune",
+			"description" : "Parker Robbins fires his twin Lorcin .380’s, destroying two selected 3x3 blocks of tiles, earning AP and dealing damage. Ends the turn.",
+			"cout" : 15,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Dormammu’s Aid",
+			"couleur" : "Bleu",
+			"description" : "(PASSIVE) The Dread One is always working in Parker’s life. Each turn there are more than 11 Blue or Purple tiles on the board, steal 1 AP of that color.",
+			"cout" : 0,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Intimidation",
+			"couleur" : "Noir",
+			"description" : "The Hood demands results, threatening his allies so they work faster. Damages the target for 100 and reduces the timer on 1 random friendly Countdown tile(s) by 1.",
+			"cout" : 9,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "3_The_Hulk",
+	"nom": "The Hulk",
+    "img": "../img/260px-The_Hulk_(Indestructible).png",
+    "puissance" : 3,
+	"description" : "After absorbing huge amounts of gamma radiation, physicist Bruce Banner emerged with impressive, but volatile, super powers. When under stress Dr. Banner transform into the Hulk, a nearly invincible muscle-bound force of nature. Capable of withstanding and delivering huge amounts of damage, the Hulk is at his most dangerous when angry.",
+	"attaques" : [
+		{
+			"nom" : "Thunderous Clap",
+			"couleur" : "Vert",
+			"description" : "The Hulk claps and a sonic shockwave rips through the battlefield. Does 118 damage to the target and destroys 3 tiles plus one for every two Green AP the team has. Does not generate AP.",
+			"cout" : 10,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Smash",
+			"couleur" : "Rouge",
+			"description" : "The Hulk smashes, consuming up to 10 of the team's Green AP and damaging the target for 284 plus 19 for each Green AP remaining. Does 30% of the damage to allies if there are more than 10 Green tiles on the board.",
+			"cout" : 14,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Anger",
+			"couleur" : "Noir",
+			"description" : "(Passive) The Hulk is angry! When damaged for over 5% of his health, a random basic Black tile becomes a 1 turn Countdown that changes 1 basic tile(s) to Green.",
+			"cout" : 0,
+			"type" : "Ressources"
+		}]
+  },
+  {
+    "uid": "3_Human_Torch",
+	"nom": "Human Torch",
+    "img": "../img/260px-Human_Torch_(Classic).png",
+    "puissance" : 3,
+	"description" : "Alongside sister Susan, Johnny Storm was among those hit by cosmic rays on a test flight. After crash-landing, the crew exhibited strange powers: the Fantastic-Four was born! The youngest team member, Johnny is brash and eager for celebrity. As the Human Torch, fire is his to command.",
+	"attaques" : [
+		{
+			"nom" : "Fireball",
+			"couleur" : "Rouge",
+			"description" : "Johnny hurls a fistful of flame, torching the opponent. Deals 177 damage and blisters the battlefield, destroying 2 Red tiles.",
+			"cout" : 8,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Inferno",
+			"couleur" : "Noir",
+			"description" : "Eager to impress, the Human Torch erupts in flame, scorching the opponent but disrupting his team. Converts up to 8 basic color tiles into Attack tiles that do 12 damage each turn, but depletes the team's Blue, Purple and Yellow AP by 30 percent.",
+			"cout" : 0,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Flame Jet",
+			"couleur" : "Vert",
+			"description" : "The Human Torch channels a deadly stream of flaming plasma. Creates a Green Countdown tile that activates every turn, dealing 14 damage for every Green AP the team has (max 126 damage a turn). Tiles cost 1 Green AP each turn.",
+			"cout" : 5,
+			"type" : "Piege"
+		}]
+  },
+  {
+    "uid": "3_Iron_Man",
+	"nom": "Iron Man",
+    "img": "../img/260px-Iron_Man_(Model_40).png",
+    "puissance" : 3,
+	"description" : "Iron Man's Model 40 armor was designed to be modular, with capabilities that can be adapted in the field. Tony Stark uses it to test powerful new technological developments and promising new scientific theories.",
+	"attaques" : [
+		{
+			"nom" : "Unibeam",
+			"couleur" : "Rouge",
+			"description" : "Tony Stark diverts all power to a focused energy beam fired from Model 40's chest. Deals 473 damage and costs 4 of the team's AP in every other color.",
+			"cout" : 13,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Ballistic Salvo",
+			"couleur" : "Bleu",
+			"description" : "Fires charged homing missiles. They do 355 damage to each enemy and crater the battlefield, destroying 3 basic tiles. Uses reserve power, sapping 3 AP from other AP colors.",
+			"cout" : 20,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Recharge",
+			"couleur" : "Jaune",
+			"description" : "Recharges weapon systems. Creates 3 Countdown tiles that activate after 2 turns, restoring 3 Red AP each. Iron Man is then stunned for 2 turns as systems reinitialize.",
+			"cout" : 14,
+			"type" : "Ressources"
+		}]
+  },
+  {
+    "uid": "3_Loki",
+	"nom": "Loki",
+    "img": "../img/260px-Loki_(Dark_Reign).png",
+    "puissance" : 3,
+	"description" : "The Trickster God traveled back in time to turn Odin's father Bor to snow, setting off the events that see his childhood self adopted into Asgard's royal family.",
+	"attaques" : [
+		{
+			"nom" : "Trickery",
+			"couleur" : "Noir",
+			"description" : "Loki’s trickery turns the enemy’s tools against them, converting enemy Protect tiles to friendly Strike tiles and enemy Strike tiles to friendly Protect tiles.",
+			"cout" : 11,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Illusions",
+			"couleur" : "Violet",
+			"description" : "You can't count on anything when Loki's around. Changes the location of 14 colored tiles.",
+			"cout" : 5,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Vert",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "3_Magneto",
+	"nom": "Magneto",
+    "img": "../img/260px-Magneto_(Classic).png",
+    "puissance" : 3,
+	"description" : "Having escaped Aushwitz-Birkenau in the October 7th, 1944 revolt, Max Eisenhardt is determined to protect mutantkind from threats of genocide, whatever it takes.",
+	"attaques" : [
+		{
+			"nom" : "Coercive Field",
+			"couleur" : "Jaune",
+			"description" : "The air crackles as Magneto creates a force field of magnetic energy to protect his allies. Converts 6 random basic color tiles into strength 11 Protect tiles.",
+			"cout" : 9,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Polarizing Force",
+			"couleur" : "Rouge",
+			"description" : "Magnet hurls a massive metal object towards the heart of the enemy team, landing with tremendous force and causing them to scatter. Destroys all Team-Up tiles, dealing 27 damage per tile. Does not generate AP.",
+			"cout" : 8,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Magnetized Projectiles",
+			"couleur" : "Bleu",
+			"description" : "Magneto turns metallic objects into deadly projectiles, causing devastation and chaos. Swaps up to 5 random Blue tiles with Red tiles. Does 93 damage for each swap.",
+			"cout" : 10,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "3_Psylocke",
+	"nom": "Psylocke",
+    "img": "../img/260px-Psylocke_(Classic).png",
+    "puissance" : 3,
+	"description" : "A powerful mutant with a complex past, Betsy Braddock is a key member of the X-Men. As Psylocke, she uses her telepathic and telekinetic gifts to manipulate thoughts and focus psionic energy into lethal psychic knives capable of rending flesh and mind alike. In addition to her supernatural abilities, Psylocke possesses the body and training of an elite ninja, making her a formidable hand to hand opponent.",
+	"attaques" : [
+		{
+			"nom" : "Psychic Knife",
+			"couleur" : "Rouge",
+			"description" : "Psylocke gains momentum, fluidly chaining attacks together. Deals 59 damage and creates a strength 12 Red Strike tile whenever fewer than 3 exist. Costs 1 less for each Red Strike tile (min cost 5).",
+			"cout" : 8,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Bewilder",
+			"couleur" : "Bleu",
+			"description" : "Psylocke steadies and channels her telepathic power, reaching into the minds of the enemy to disrupt their attack. Converts a basic Blue tile to a 3 turn Countdown tile that steals up to 9 AP from the enemies' largest color pool.",
+			"cout" : 10,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Psi-Katana",
+			"couleur" : "Noir",
+			"description" : "Psylocke carves the enemy up with her psionic katana. Deals 59 damage and leaves the enemy bleeding, converting a basic Black tile to an Attack tile that deals 14 damage to the current target each turn.",
+			"cout" : 6,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "3_The_Punisher",
+	"nom": "The Punisher",
+    "img": "../img/260px-The_Punisher_(Dark_Reign).png",
+    "puissance" : 3,
+	"description" : "His family lost to criminal violence, The Punisher is obsessed with vengeance. The ultimate any-means necessary vigilante, he singles mindedly hunts down villains and enacts his revenge. Advanced military training and an arsenal of deadly weapons make The Punisher ruthlessly effective.",
+	"attaques" : [
+		{
+			"nom" : "Molotov Cocktails",
+			"couleur" : "Noir",
+			"description" : "The Punisher lobs a bottle of liquid mayhem. Damages the enemy team for 71 and creates a Red Countdown tile that spreads fire every 3 turns, converting a random basic color tile to a 7 damage Attack tile.",
+			"cout" : 7,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Judgement",
+			"couleur" : "Vert",
+			"description" : "The Punisher unloads his arsenal. Destroys a 3x3 group of tiles, doing damage but not generating AP. Chaos creates an opening, converting a basic color tile to a strength 12 Strike tile.",
+			"cout" : 8,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Retribution",
+			"couleur" : "Rouge",
+			"description" : "The Punisher draws his sidearm and finishes what he started. Damages the target for 118. If they are below 20% of their max health, he downs them.",
+			"cout" : 8,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "3_Ragnarok",
+	"nom": "Ragnarok",
+    "img": "../img/260px-Ragnarok_(Dark_Avengers_Thor).png",
+    "puissance" : 3,
+	"description" : "A cyborg clone of Thor, Ragnarok shares the God of Thunder's divine strength, stamina, agility, and hubris.",
+	"attaques" : [
+		{
+			"nom" : "Godlike Power ",
+			"couleur" : "Vert",
+			"description" : "Ragnarok exhibits his godlike power, cleaving the battlefield in two. Destroys the two center columns of tiles so completely they don’t generate AP.",
+			"cout" : 6,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Thunderclap",
+			"couleur" : "Rouge",
+			"description" : "Ragnarok calls upon the storm, dealing 71 damage to the current target and changing 2 tiles of any color to Green.",
+			"cout" : 6,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Aucune",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "3_Sentry",
+	"nom": "Sentry",
+    "img": "../img/260px-Sentry_(Dark_Avengers).png",
+    "puissance" : 3,
+	"description" : "The world forgot that Robert Reynolds was The Sentry, a tortured hero with the power of one million suns.",
+	"attaques" : [
+		{
+			"nom" : "Supernova",
+			"couleur" : "Rouge",
+			"description" : "The Sentry projects an epic energy blast. Damages the enemy team for 189 before shattering up to 4 random Red tiles. Each tile damages the enemy team for 35 and allies for 35 but does not generate AP. This ability ends the turn.",
+			"cout" : 11,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "World Rupture",
+			"couleur" : "Vert",
+			"description" : "Sentry flies into the heart of the battlefield, sending waves of kinetic energy rippling outward. Creates Countdown tiles that do 24 damage to enemies and 12 to allies.",
+			"cout" : 7,
+			"type" : "Piege"
+		},
+		{
+			"nom" : "Sacrifice",
+			"couleur" : "Jaune",
+			"description" : "The Sentry sacrifices himself for the good of the team. He takes 237 damage, but converts a random Yellow tile into a strike tile with a strength of 59",
+			"cout" : 8,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "3_She-Hulk",
+	"nom": "She-Hulk",
+    "img": "../img/260px-She-Hulk_(Modern).png",
+    "puissance" : 3,
+	"description" : "A gamma-irradiated blood transfusion from her cousin Bruce Banner saved Jennifer Walter's life and transformed her into the Sensational She-Hulk! Getting all of The Hulk's strength but none of his rage, Jennifer keeps her intellect while She-Hulk, allowing her to defend justice both as an expert attorney in the courtroom and as an Avenger on the battlefield.",
+	"attaques" : [
+		{
+			"nom" : "Settlement",
+			"couleur" : "Bleu",
+			"description" : "She-Hulk flexes her legal muscle, striking a deal to balance the scales of justice. Replaces up to 2 random Protect, Strike, or Attack tiles with Strike Tiles distributed between you and the enemy team. The deal is in your favor - Friendly Strike Tiles are strength 12 and Enemy Strike Tiles are Strength 7.",
+			"cout" : 9,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Reprieve",
+			"couleur" : "Vert",
+			"description" : "She-Hulk charges into battle, catching her foes off guard and giving allies a chance to rest. Reduces one color of the enemies' AP reserves to zero, and then gives allies a burst of 59 health.",
+			"cout" : 12,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Power Of Attorney",
+			"couleur" : "Rouge",
+			"description" : "She-Hulk strikes the ground, causing the earth to shift under her enemies' feet. Destroys 10 tiles from the bottom of the board and deals 83 Damage to the enemy team. Does not generate AP.",
+			"cout" : 9,
+			"type" : "Destruction"
+		}]
+  },
+  {
+    "uid": "3_Spider-Man",
+	"nom": "Spider-Man",
+    "img": "../img/260px-Spider-Man_(Classic).png",
+    "puissance" : 3,
+	"description" : "Peter Parker struggles to balance his studies, work, family life, romance, and heroism. Protecting New York City using his proportional strength of a spider, tremendous agility, and web-shooters of his own invention, he is often late for dinner.",
+	"attaques" : [
+		{
+			"nom" : "Web Bandages",
+			"couleur" : "Jaune",
+			"description" : "Spider-Man webs makeshift slings, healing his team for 142. If 3 or more Web tiles exist he converts them to bandages, healing his team for an additional 149.",
+			"cout" : 13,
+			"type" : "Soin"
+		},
+		{
+			"nom" : "All Tied Up",
+			"couleur" : "Bleu",
+			"description" : "Spider-Man slings webs, stunning the enemy for 1 turn. He then adds a Yellow Web tile to the board.",
+			"cout" : 5,
+			"type" : "Paralysie"
+		},
+		{
+			"nom" : "Spider-Sense",
+			"couleur" : "Violet",
+			"description" : "(Passive) Spider-Man's senses tingle and he moves to protect his team. If there are less than two friendly Purple Protect tiles, he creates one when his team matches Purple tiles. New Protect tile Strength is based on the number of Web tiles in play.",
+			"cout" : 0,
+			"type" : "Protection"
+		}]
+  },
+  {
+    "uid": "3_Storm",
+	"nom": "Storm",
+    "img": "../img/260px-Storm_(Mohawk).png",
+    "puissance" : 3,
+	"description" : "Storm's strong will and bright spirit drove her to accept Charles Xavier's offer to leave her African village for America as a member of the X-Men. This choice set her on the path to become not just the X-Men's leader, but one of the most respected and powerful heroes on Earth.",
+	"attaques" : [
+		{
+			"nom" : "Lightning Strike",
+			"couleur" : "Vert",
+			"description" : "Storm calls a blinding bolt of electricity from the heavens, shattering 8 tiles, doing damage and earning AP for each.",
+			"cout" : 10,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Mistress of the Elements",
+			"couleur" : "Jaune",
+			"description" : "Clouds darken the battlefield and lightning streaks across the sky as Storm's awesome power inspires her teammates and assaults her foes. Destroys up to 5 Team-Up tiles, generating Team-Up AP and dealing 38 damage per tile.",
+			"cout" : 9,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Hailstorm",
+			"couleur" : "Noir",
+			"description" : "Ororo glares and dark clouds coalesce. Hailstones pelt the enemy, converting 16 basic tiles to Strength 10 Attack tiles.",
+			"cout" : 9,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "3_Thor",
+	"nom": "Thor",
+    "img": "../img/260px-Thor_(Modern).png",
+    "puissance" : 3,
+	"description" : "Wielding the might of Mjolnir and the power of the storm, few can survive the righteous fury of the Son of Odin.",
+	"attaques" : [
+		{
+			"nom" : "Mjolnir’s Might",
+			"couleur" : "Rouge",
+			"description" : "Thor brings his hammer down on the enemy, dealing 83 damage. The magical energies of his hammer begin to charge his next strike, adding 3 Yellow tiles to the board.",
+			"cout" : 8,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Thunder Strike",
+			"couleur" : "Jaune",
+			"description" : "A lightning bolt pierces the sky and rips into the target, dealing 154 damage. A storm is brewing; 4 Green tiles are added to the board.",
+			"cout" : 12,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Call The Storm",
+			"couleur" : "Vert",
+			"description" : "Thor summons a violent storm to smite the enemy. The rage of the heavens rains down on the battlefield, dealing 118 damage to all enemies and an additional 118 to the target. ",
+			"cout" : 14,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "3_Wolverine",
+	"nom": "Wolverine",
+    "img": "../img/260px-Wolverine_(Patch).png",
+    "puissance" : 3,
+	"description" : "When the X-Men are presumed dead, Wolverine goes undercover, buying a stake in Princess Bar in the small island nation of Madripoor, hotbed of inequality and corruption. Without his teammates to cool his temper, his response to injustice is swift and harsh.",
+	"attaques" : [
+		{
+			"nom" : "Berserker Rage",
+			"couleur" : "Vert",
+			"description" : "Deals 237 damage to the current target and creates 2 Strike tiles for each team (Green for allies, Purple for enemies)",
+			"cout" : 9,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Best There Is",
+			"couleur" : "Rouge",
+			"description" : "Wolverine deals 16 damage for each tile on the board that bears his icon.",
+			"cout" : 14,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Healing Factor",
+			"couleur" : "Jaune",
+			"description" : "(PASSIVE) Every turn there are 12 or more Yellow tiles, Wolverine's healing factor restores 59 health.",
+			"cout" : 0,
+			"type" : "Soin"
+		}]
+  },
+  {
+    "uid": "2_Ares",
+	"nom": "Ares",
+    "img": "../img/260px-Ares_(Dark_Avengers).png",
+    "puissance" : 2,
+	"description" : "The God of War, Ares mastery of combat operations is unparalleled. His violent nature and appetite for warfare make him a controversial figure. His alliance with the Dark Avengers put him in direct conflict the world's greatest heroes.",
+	"attaques" : [
+		{
+			"nom" : "Onslaught",
+			"couleur" : "Vert",
+			"description" : "Ares charges into battle, seething with fury. He channels his rage into one mighty blow, depleting the team's green AP and doing 14 damage for each. His warmongering incites the enemy, granting them 1 green AP for every 2 consumed.",
+			"cout" : 5,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Rampage",
+			"couleur" : "Rouge",
+			"description" : "Brutal combat drives Ares into a reckless frenzy. Swinging his axe in huge violent arcs, he cleaves the enemy team for 50 damage, or 100 if he is below 20% of his max health.",
+			"cout" : 10,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Sunder",
+			"couleur" : "Jaune",
+			"description" : "Ares sacrifices his body to strike a crippling blow. deals 150 damage to the enemy and 100 to himself. It takes time for Ares to recover, converting a random basic color tile to a 3 turn countdown tile that does 50 damage and heals him for 63.",
+			"cout" : 10,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "2_Black_Widow",
+	"nom": "Black Widow",
+    "img": "../img/Black_Widow_(Original).png",
+    "puissance" : 2,
+	"description" : "Equipped with a costume that allowed her to walk on walls and swing frm a grappling hook fired from her bracelets, Black Widow enlisted Hawkeye's help to attempt to destroy Iron Man.",
+	"attaques" : [
+		{
+			"nom" : "Aggressive Recon",
+			"couleur" : "Violet",
+			"description" : "Natasha goes undercover to find her opponent’s secrets. She steals 2 Yellow, Blue, Red, and Green AP, undermining the enemy's plans and setting hers into motion.",
+			"cout" : 11,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Anti-Gravity Device",
+			"couleur" : "Bleu",
+			"description" : "Stolen Stark tech increases enemy countdowns by 2. If there are none, heals allies of 100 damage.",
+			"cout" : 9,
+			"type" : "Soin"
+		},
+		{
+			"nom" : "Espionage",
+			"couleur" : "Noir",
+			"description" : "(Passive) Black Widow steals enemy secrets. When she attacks by making a Purple match and the enemy has Purple AP, she steals 1 from them.",
+			"cout" : 0,
+			"type" : "Ressources"
+		}]
+  },
+  {
+    "uid": "2_Bullseye",
+	"nom": "Deadpool",
+    "img": "../img/260px-Bullseye_(Dark_Avengers_Hawkeye).png",
+    "puissance" : 2,
+	"description" : "Able to turn most any object into lethal projectile, and with his skeleton reinforced with strips of admintium, Bullseye was the obvious candidate to play the role of Hawkeye in Norman Osborn's Dark Avengers. Assuming you overlook his compulsion to casual murder.",
+	"attaques" : [
+		{
+			"nom" : "Adamantium Bones",
+			"couleur" : "Violet",
+			"description" : "(PASSIVE) Bullseye’s skeleton is infused with the strongest metal on earth. If there are fewer than 3 friendly Purple Protect tiles, create one whenever anyone matches Purple tiles.",
+			"cout" : 0,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Murderous Aim",
+			"couleur" : "Noir",
+			"description" : "Bullseye has really taken to this bow and arrow shtick. Turns a selected (non-Countdown) tile into a Critical tile and deals 1000 damage if there are now 4 or more Critical tiles.",
+			"cout" : 16,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Vert",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "2_Captain_America",
+	"nom": "Capt America",
+    "img": "../img/260px-Captain_America_(Modern).png",
+    "puissance" : 2,
+	"description" : "Steve Rogers enlisted to fight the Third Reich, but was rejected on account of physical frailty. His patriotism led him to receive the 'Super Soldier Serum' and he became Captain America, beacon of liberty and symbol of freedom.",
+	"attaques" : [
+		{
+			"nom" : "Sentinel of Liberty",
+			"couleur" : "Jaune",
+			"description" : "Captain America courageously rushes to protect the team’s flank. Transforms 3 chosen basic tiles into Yellow Protect tiles, each with a strength of 13.",
+			"cout" : 19,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Star Spangled Avenger",
+			"couleur" : "Rouge",
+			"description" : "The Captain hurls his trusty shield into battle. Hits the target for 50 damage and transforms a chosen basic tile into a 3 turn Countdown tile that returns 8 Red AP.",
+			"cout" : 11,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Peacemaker",
+			"couleur" : "Bleu",
+			"description" : "Captain America gallantly launches his shield at the enemy. Stuns the target for 2 turns and transforms a chosen basic tile into a 3 turn Countdown tile that returns 8 Blue AP.",
+			"cout" : 12,
+			"type" : "Paralysie"
+		}]
+  },
+  {
+    "uid": "2_Daken",
+	"nom": "Daken",
+    "img": "../img/260px-Daken_(Dark_Avengers_Wolverine).png",
+    "puissance" : 2,
+	"description" : "Daken is Wolverine's son, unknown to his biological father until his adulthood. He is a sadistic killer and manipulative sociopath.",
+	"attaques" : [
+		{
+			"nom" : "Pheremone Rage",
+			"couleur" : "Violet",
+			"description" : "(PASSIVE) Daken releases a scent that sets his enemies on edge, using their anger to his advantage. Whenever anyone makes a Green match, add a Red Strike tile to the board of strength 5.",
+			"cout" : 0,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Healing & Heat",
+			"couleur" : "Noir",
+			"description" : "(PASSIVE) Daken’s healing factor allows him to recover 3% of his health every turn. If there are fewer than 9 Blue tiles, the terrible drug 'Heat' kicks in, and he loses 3% of his health instead.",
+			"cout" : 0,
+			"type" : "Soin"
+		},
+		{
+			"nom" : "Chemical Reaction",
+			"couleur" : "Bleu",
+			"description" : "Daken springs a trap, but his addiction to 'Heat' threatens to push him over the edge. Damages the target for 100, converts two 2 Blue tiles to Green, and converts up to 2 friendly Strike tiles to basic tiles, doing 50 damage per Strike tile converted.",
+			"cout" : 5,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "2_Hawkeye",
+	"nom": "Hawkeye",
+    "img": "../img/260px-Hawkeye_(Modern).png",
+    "puissance" : 2,
+	"description" : "Clint Barton began his lifelong devotion to archery as a performer in the Carson Carnival of Traveling Wonders. After years spent in the circus a chance run in with Iron Man inspired Clint to become a costumed hero.",
+	"attaques" : [
+		{
+			"nom" : "Electric Arrow",
+			"couleur" : "Bleu",
+			"description" : "Hawkeye fires an arrow that delivers a high-voltage electric shock when it hits. Changes a chosen basic Blue tile into a 3-turn Countdown tile. When it activates, stuns the target for 2 turns and reduces enemy AP in a random color by 4.",
+			"cout" : 9,
+			"type" : "Paralysie"
+		},
+		{
+			"nom" : "Blast Arrow",
+			"couleur" : "Rouge",
+			"description" : "Clint lines up the perfect shot. When it hits, it creates a massive explosion. Changes a chosen basic Red tile into a 4-turn Countdown tile. When it activates, deals 200 damage to all enemies.",
+			"cout" : 9,
+			"type" : "Piege"
+		},
+		{
+			"nom" : "Speed Shot",
+			"couleur" : "Violet",
+			"description" : "(PASSIVE) Hawkeye nocks multiple arrows and lets them fly. Is on now, bro. Whenever you match 5 or more tiles, converts up to 3 Purple tiles to 3-turn Countdown tiles that deal 154 damage when activated.",
+			"cout" : 0,
+			"type" : "Piege"
+		}]
+  },
+  {
+    "uid": "2_Human_Torch",
+	"nom": "Human Torch",
+    "img": "../img/260px-Human_Torch_(Johnny_Storm).png",
+    "puissance" : 2,
+	"description" : "Only 16 when he was bombarded with cosmic rays and transformed into the Human Torch, Johnny Storm held a number of professions outside of super-heroics through the years. When off-duty from the Fantastic Four, Johnny's been an actor, a fire-fighter, and even the C.F.O. of Fantastic Four, Inc! None of these lasted very long, though, and Johnny would always return to what he loves most - being a super-powered celebrity adventurer.",
+	"attaques" : [
+		{
+			"nom" : "Fireball",
+			"couleur" : "Rouge",
+			"description" : "Johnny hurls a fistful of flame, torching the opponent. Deals 178 damage and blisters the battlefield, destroying 2 Red tiles.",
+			"cout" : 8,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Inferno",
+			"couleur" : "Noir",
+			"description" : "Eager to impress, the Human Torch erupts in flame, scorching the opponent but disrupting his team. Converts up to 8 basic color tiles into Attack tiles that do 12 damage each turn, but depletes the team's Blue, Purple and Yellow AP by 30 percent.",
+			"cout" : 10,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Flame Jet",
+			"couleur" : "Vert",
+			"description" : "The Human Torch channels a deadly stream of flaming plasma. Creates a Green Countdown tile that activates every turn, dealing 14 damage for every Green AP the team has (max 126 damage a turn). Tiles cost 1 Green AP each turn.",
+			"cout" : 5,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "2_Magneto",
+	"nom": "Magneto",
+    "img": "../img/260px-Magneto_(Marvel_NOW!).png",
+    "puissance" : 2,
+	"description" : "His powers of magnetism still powerful, but is mastery of them broken, Magneto fights to protect new mutants from a world that hates and fears them. With control of his powers weakened, he uses the foresight and scheming developed in his years of villainy to defend mutant rights, though his checkered past makes it difficult for his companions to trust him.",
+	"attaques" : [
+		{
+			"nom" : "Iron Hammer",
+			"couleur" : "Bleu",
+			"description" : "Magneto forms a mass of shrapnel to hurl at his enemies. Converts a random Blue tile into a 1 turn Countdown tile that destroys the 8 surrounding tiles (Does not grant AP for destroyed tiles).",
+			"cout" : 13,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Polarity Shift",
+			"couleur" : "Violet",
+			"description" : "Magneto uses the sheer force of magnetism to reconfigure the battlefield. Changes 3 selected basic color tiles to Blue.",
+			"cout" : 9,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Magnetic Flux",
+			"couleur" : "Rouge",
+			"description" : "Magneto creates an unstable magnetic field. Turns a random basic Red tile into a 3 turn Countdown tile that deals 183 damage to the current target.",
+			"cout" : 14,
+			"type" : "Destruction"
+		}]
+  },
+  {
+    "uid": "2_Moonstone",
+	"nom": "Moonstone",
+    "img": "../img/260px-Moonstone_(Dark_Avengers_Ms._Marvel).png",
+    "puissance" : 2,
+	"description" : "Karla Sofen is a master manipulator. As psychiatrist to the original Moonstone, she convinced him to turn over the alien gravity stone that gave him extraordinary powers.",
+	"attaques" : [
+		{
+			"nom" : "Gravity Warp",
+			"couleur" : "Violet",
+			"description" : "Moonstone manipulates gravity, warping a random enemy Purple or Black Special tile to the location of a chosen basic tile. If there are no valid Special tiles, the warp collapses doing 75 damage.",
+			"cout" : 8,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Photon Blast",
+			"couleur" : "Rouge",
+			"description" : "Moonstone concentrates photons into destructive blasts of radiation, harnessing ambient energy to intensify the effect. Does 25 base damage and 13 damage for each Red tile on the board.",
+			"cout" : 11,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Control Shift",
+			"couleur" : "Noir",
+			"description" : "Moonstone shifts control of a random enemy Countdown tile to her team, targeting the enemy. If there are no Countdown tiles, stuns the target for 1 turn.",
+			"cout" : 17,
+			"type" : "Paralysie"
+		}]
+  },
+  {
+    "uid": "2_Spider-Man",
+	"nom": "Spider-Man",
+    "img": "../img/260px-Spider-Man_(Bag-Man).png",
+    "puissance" : 2,
+	"description" : "Having removed his symbiote suit with the help of Reed Richards, a naked Spider-Man dons a Fantastic Four suit and a paper bag mask to get back into action as the Amazing Bag-Man.",
+	"attaques" : [
+		{
+			"nom" : "Switcheroo",
+			"couleur" : "Violet",
+			"description" : "Spider-Man pulls the old switcheroo, swapping 2 basic colored tiles and turning them to Web tiles.",
+			"cout" : 18,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Web-Slinger",
+			"couleur" : "Bleu",
+			"description" : "Slings a web that wraps 1 tile(s) in a sticky cocoon. These locked tiles stick in place and their special effects are neutralized. The locked effect is removed and tile effects resume if it is matched or otherwise destroyed.",
+			"cout" : 17,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Snarky Remark",
+			"couleur" : "Jaune",
+			"description" : "The wise-cracking web-head befuddles his foe, increasing the timer on a selected Countdown tile by 1 plus 1 for every Web tile (up to 10). Turns all Web tiles to basic tiles.",
+			"cout" : 7,
+			"type" : "Protection"
+		}]
+  },
+  {
+    "uid": "2_Storm",
+	"nom": "Storm",
+    "img": "../img/260px-Storm_(Classic).png",
+    "puissance" : 2,
+	"description" : "Being worshiped as a weather goddess as a teenager gave Storm a commanding presence she needed to become a leader of the X-Men. Surviving as a child thief on the streets of Cairo gave her the grit she needed to succeed in that role.",
+	"attaques" : [
+		{
+			"nom" : "Lightning Storm",
+			"couleur" : "Vert",
+			"description" : "Ororo shatters the air with a volley of lightning, destroying 2 tiles plus one for every two Green AP her team has, dealing damage and generating AP.",
+			"cout" : 12,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Wind Storm",
+			"couleur" : "Bleu",
+			"description" : "Storm creates a whirling tempest, damaging the enemy team for 125 and stunning the target for 2 turns.",
+			"cout" : 11,
+			"type" : "Paralysie"
+		},
+		{
+			"nom" : "Raging Tempest",
+			"couleur" : "Jaune",
+			"description" : "(PASSIVE) Storm surrounds her team with a whirling tempest that unleashes fury when provoked. If a team member is damaged for 20% of their max health, it deals 19 damage to all enemies. If every team member is below 50% health, damage increases to 125.",
+			"cout" : 0,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "2_Thor",
+	"nom": "Thor",
+    "img": "../img/260px-Thor_(Marvel_NOW!).png",
+    "puissance" : 2,
+	"description" : "Thor hath strength beyond mortal men and doth wield the legendary hammer Mjolnir. He is a mighty Avenger, verily.",
+	"attaques" : [
+		{
+			"nom" : "Mjolnir’s Might",
+			"couleur" : "Rouge",
+			"description" : "Thor brings his hammer down on the enemy, dealing 44 damage. The magical energies of his hammer begin to charge his next strike, adding 3 Yellow tiles to the board.",
+			"cout" : 8,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Thunder Strike",
+			"couleur" : "Jaune",
+			"description" : "A lightning bolt pierces the sky and rips into the target, dealing 81 damage. A storm is brewing; 4 Green tiles are added to the board.",
+			"cout" : 12,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Call The Storm",
+			"couleur" : "Vert",
+			"description" : "Thor summons a violent storm to smite the enemy. The rage of the heavens rains down on the battlefield, dealing 125 damage to the target and 63 damage to other enemies.",
+			"cout" : 14,
+			"type" : "Degat"
+		}]
+  },
+  {
+    "uid": "2_Wolverine",
+	"nom": "Wolverine",
+    "img": "../img/260px-Wolverine_(Astonishing_X-Men).png",
+    "puissance" : 2,
+	"description" : "James Howlett was born with retractable claws made of bone. His skeleton has been fused with adamantium by the fiendish experiments of Weapon X.",
+	"attaques" : [
+		{
+			"nom" : "Feral Claws",
+			"couleur" : "Vert",
+			"description" : "Wolverine's rage builds. He deals 33 damage and places 1 strength 3 Red Strike tile plus 1 for every 3 Red AP his team has.",
+			"cout" : 6,
+			"type" : "Amelioration"
+		},
+		{
+			"nom" : "Adamantium Slash",
+			"couleur" : "Rouge",
+			"description" : "Wolverine rips the enemy to shreds, dealing 180 damage.",
+			"cout" : 12,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Healing Factor",
+			"couleur" : "Jaune",
+			"description" : "PASSIVE) Wolverine's healing factor mends major injury and sustains his assault.  If Wolverine is below 50% health and his team makes a Yellow match, his healing factor activates, restoring 35 health.",
+			"cout" : 0,
+			"type" : "Soin"
+		}]
+  },
+  {
+    "uid": "1_Black Widow",
+	"nom": "Black Widow",
+    "img": "../img/260px-Black_Widow_(Modern).png",
+    "puissance" : 1,
+	"description" : "Trained by secret KGB 'Red Room' program, Natasha Romanova was originally sent by the Russians to steal defense secrets from Tony Stark.",
+	"attaques" : [
+		{
+			"nom" : "Aggressive Recon",
+			"couleur" : "Violet",
+			"description" : "Natasha goes undercover to find her opponent’s secrets. She steals 2 Yellow, Blue, Red, and Green AP, undermining the enemy's plans and setting hers into motion.",
+			"cout" : 16,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Widow’s Sting",
+			"couleur" : "Bleu",
+			"description" : "A dart from Black Widow's bracelets strikes the target and releases an electrical charge, stunning them for 2 turns.",
+			"cout" : 9,
+			"type" : "Paralysie"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Jaune",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "1_Hawkeye",
+	"nom": "Hawkeye",
+    "img": "../img/260px-Hawkeye_(Classic).png",
+    "puissance" : 1,
+	"description" : "Clint Barton wasn't exposed to any extraordinary radiation. He has no X-gene, no mystical artifacts, and no bottomless bank account. He has just practiced, every single day.",
+	"attaques" : [
+		{
+			"nom" : "Take Aim",
+			"couleur" : "Violet",
+			"description" : "Hawkeye prepares to place the perfect shot, turning a selected basic Purple tile into a Critical tile.",
+			"cout" : 8,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Arrow Stab",
+			"couleur" : "Rouge",
+			"description" : "No bow, no problem. Clint lunges forward, arrow in hand, clearing a selected row and dealing damage (but not generating AP).",
+			"cout" : 7,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Jaune",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "1_Iron_Man",
+	"nom": "Iron Man",
+    "img": "../img/260px-Iron_Man_(Model_35).png",
+    "puissance" : 1,
+	"description" : "Tony Stark is an inventor and industrialist, constantly working to improve his Iron Man armor, He inherited his multi-billion dollar company, Stark Industries, from his father Howard.",
+	"attaques" : [
+		{
+			"nom" : "Repulsor Blast",
+			"couleur" : "Rouge",
+			"description" : "A high-impact kinetic blast from Iron Man's hand deals 63 damage to the target.",
+			"cout" : 10,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Armored Assault",
+			"couleur" : "Jaune",
+			"description" : "Iron Man charges to the fore and positions his armor to shield his allies, creating 2 Protect tiles. From there he unleashes his weaponry, dealing 25 damage.",
+			"cout" : 8,
+			"type" : "Protection"
+		},
+		{
+			"nom" : "Ultra-Freon Beam",
+			"couleur" : "Bleu",
+			"description" : "The World's Greatest Engineer freezes the target, stunning them for 1 turn and dealing 125 damage.",
+			"cout" : 19,
+			"type" : "Paralysie"
+		}]
+  },
+  {
+    "uid": "1_Juggernaut",
+	"nom": "Juggernaut",
+    "img": "../img/260px-Juggernaut_(Classic).png",
+    "puissance" : 1,
+	"description" : "Once Cain Marko has built up any momentum, there is almost nothing in the universe that can slow him down or halt his charge.",
+	"attaques" : [
+		{
+			"nom" : "Unstoppable Crash",
+			"couleur" : "Vert",
+			"description" : "Juggernaut's momentum sends him barreling through the battlefield, destroying 16 random tiles. Does not generate AP.",
+			"cout" : 6,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Headbutt",
+			"couleur" : "Rouge",
+			"description" : "Juggernaut slams head-first into the enemy, dealing 125 damage to the target and 63 damage to himself.",
+			"cout" : 6,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Noir",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "1_Storm",
+	"nom": "Storm",
+    "img": "../img/260px-Storm_(Modern).png",
+    "puissance" : 1,
+	"description" : "When her mutant weather-control powers first manifested, Ororo Munroe brought many days of rain to save a village at the foot of Kilimanjaro. This caused a drought in surrounding villages, killing hundreds of animals, until Ororo learned to work with the natural order.",
+	"attaques" : [
+		{
+			"nom" : "Lightning Strike",
+			"couleur" : "Vert",
+			"description" : "Storm calls a blinding bolt of electricity from the heavens, shattering 8 tiles, doing damage and earning AP for each.",
+			"cout" : 10,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Mistress of the Elements",
+			"couleur" : "Jaune",
+			"description" : "Clouds darken the battlefield and lightning steaks across the sky as Storm's awesome power inspires her teammates and assults her foes. Destroys up to x Team-Up tiles, generating Team-Up AP and dealing xx damage per tile. ",
+			"cout" : 9,
+			"type" : "Destruction"
+		},
+		{
+			"nom" : "Hailstorm",
+			"couleur" : "Noir",
+			"description" : "Ororo glares and dark clouds coalesce. Hailstones pelt the enemy, converting 16 basic tiles to Attack tiles.",
+			"cout" : 9,
+			"type" : "Amelioration"
+		}]
+  },
+  {
+    "uid": "1_Venom",
+	"nom": "Venom",
+    "img": "../img/260px-Venom_(Dark_Avengers_Spider-Man).png",
+    "puissance" : 1,
+	"description" : "This alien symbiote originally attached itself to Spider-Man, gaining some of his powers. Mac Gargan' formerly the Scorpion, bonded with the creature before joining the Thunderbolts.",
+	"attaques" : [
+		{
+			"nom" : "Devour",
+			"couleur" : "Noir",
+			"description" : "If there are at least 6 Web tiles on the board, Venom grabs his target and eats them whole, destroying all Web tiles. Otherwise, he bites for 31 damage.",
+			"cout" : 12,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Symbiote Snare",
+			"couleur" : "Violet",
+			"description" : "Venom sends out his tendrils like a rope, wrapping up an enemy to stun them for 1 turn. The tendrils leave their mark on the battlefield as Venom stalks his prey; add 1 Green Web tile to the board.",
+			"cout" : 7,
+			"type" : "Paralysie"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Vert",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  },
+  {
+    "uid": "1_Yelena_Belova",
+	"nom": "Yelena Belova",
+    "img": "../img/260px-Yelena_Belova_(Dark_Avengers_Widow).png",
+    "puissance" : 1,
+	"description" : "The second spy to use the code name Black Widow, Yelena lacks Natasha's morals. She has often tried to kill her predecessor to prove that she alone deserves the title.",
+	"attaques" : [
+		{
+			"nom" : "Lethal Recon",
+			"couleur" : "Violet",
+			"description" : "Yelena goes undercover to damage her opponents. She steals Yellow, Blue, Red, and Green AP, undermining the enemy's plans and doing 31 damage.",
+			"cout" : 19,
+			"type" : "Ressources"
+		},
+		{
+			"nom" : "Payback Mission",
+			"couleur" : "Noir",
+			"description" : "The enemy may have thought they were in control, but Yelena's plans for revenge have been put into motion. Turns one enemy-owned special tile into a Critical tile and hits the target for 31 damage.",
+			"cout" : 13,
+			"type" : "Degat"
+		},
+		{
+			"nom" : "Aucune",
+			"couleur" : "Bleu",
+			"description" : "",
+			"cout" : 0,
+			"type" : "Aucune"
+		}]
+  }
+]

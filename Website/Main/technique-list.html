@@ -1,0 +1,82 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="Services/heros-service.html">
+<link rel="import" href="Services/technique-service.html">
+<link rel="import" href="technique-card.html">
+
+<polymer-element name="technique-list" attributes="nom filter debug">
+  <template>
+    <style>
+    :host {
+      display: block;
+	  margin-up: 10px;
+    }
+    technique-card {
+      margin-bottom: 10px;
+    }
+    </style>
+    
+    <!-- add markup here -->
+	<technique-service id="serviceTechnique" filter="{{filter}}" techniques="{{techniques}}" debug="true" nom="{{nom}}"></technique-service>
+    <div layout vertical center>
+	  <template repeat="{{technique in techniques}}">
+	  <technique-card
+		nom="{{technique.nom}}"
+		debug="true">
+		  <h2 id="nomTechnique">{{technique.nom}}</h2>
+		  <p id="nomHeros">Perso : {{technique.nomHeros}}</p>
+		  <p id="couleurTechnique">Couleur : {{technique.couleur}}</p>
+		  <p id="coutTechnique">Cout : {{technique.cout}} AP</p>
+		  <p id="typeTechnique">Type : {{technique.type}}</p>
+		  <p id="descriptionTechnique">{{technique.description}}</p>
+		</technique-card>
+	  </template>
+</div>
+  </template>
+
+  <script>
+Polymer({
+	publish: {
+		nom: {
+			reflect: true
+		},
+		debug: {
+			reflect: true
+		},
+		filter: {
+			reflect: true
+		}
+	},
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-list : created("+this.getAttribute("nom")+")");
+		}
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-list : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-list : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-list : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-list : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-list : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+	}
+});
+  </script>
+
+</polymer-element>

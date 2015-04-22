@@ -1,0 +1,89 @@
+﻿<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="heros-card" attributes="nom debug">
+  <template>
+    <style>
+    :host {
+      position: relative;
+      background-color: white;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+	
+    .card-header {
+      margin-right: 10px;
+	  width: 100%;
+    }
+    
+    polyfill-next-selector { content: '.card-header h2'; }
+	.card-header ::content h2 {
+	  margin-bottom: 5px;
+	  font-size: 0.9rem;
+	  font-weight: 300;
+	}
+
+polyfill-next-selector { content: '.card-header img'; }
+	.card-header ::content img {
+	  width: 70px;
+	  border-radius: 10%;
+	  margin: 10px;
+	}
+    
+    </style>
+
+    <div class="card-header" layout vertical center>
+		<content select="img" on-tap="{{imgTapped}}"></content>
+		<content select="h2"></content>
+    </div>
+    
+  </template>
+  <script>
+  Polymer({
+	publish: {
+        nom: {
+			reflect: true
+        },
+		debug: {
+			reflect: true
+		}
+    },
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-card : created("+this.getAttribute("nom")+")");
+		}
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-card : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-card : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-card : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-card : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-card : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+	},
+	imgTapped: function(event, detail, sender) {
+		if(this.getAttribute("debug") == "true") {
+			console.log('imgTapped '+this.getAttribute("nom"));
+		}
+		this.fire('img-tap');
+	}
+  });
+  </script>
+</polymer-element>

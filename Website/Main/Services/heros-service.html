@@ -1,0 +1,425 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+<!-- 
+  `<post-service>` provides an API for a fake service -- 
+  _unquote_, the read-only social networking service!
+
+  Provides a very simple API: `posts` returns the list of posts.
+  `setFavorite` pretends to persist a user's favorite choice.
+
+  @element post-service
+  @demo 
+  @homepage http://www.polymer-project.org/docs/start/tutorial.html
+-->
+
+<!--
+  An array of post objects, with the following format:
+
+  <table border="0">
+    <tr>
+      <td><code>uid</code></td>
+      <td>Number</td>
+      <td>Unique ID for this post.</td>
+    </tr>
+     <tr>
+      <td><code>username</code></td>
+      <td>String</td>
+      <td>Poster's username.</td>
+    </tr>
+    <tr>
+      <td><code>avatar</code></td>
+      <td>String</td>
+      <td>URL for the user's avatar.</td>
+    </tr>  
+         <tr>
+      <td><code>text</code></td>
+      <td>String</td>
+      <td>Post text.</td>
+    </tr>  
+    <tr>
+      <td><code>favorite</code></td>
+      <td>Boolean</td>
+      <td>True if the current user favorited this post.</td>
+    </tr>
+  </table>
+  
+  @attribute posts 
+  @type Array
+  @default []
+-->
+<polymer-element name="heros-service" attributes="heroes filter nom debug">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+	  param="{'refr': true}"
+      url="../api/Heros.json"
+      on-core-response="{{herosLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  
+  var heroesSave = [];
+  
+  Polymer('heros-service', {
+	publish: {
+		nom: {
+			reflect: true
+		},
+		debug: {
+			reflect: true
+		},
+		filter: {
+			reflect: true
+		}
+	},
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : created("+this.getAttribute("nom")+")");
+		}
+		this.heroesTemp = [];
+		this.heroes = [];
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+		
+		// ToDo : factoriser
+		// Make a copy of the loaded data
+		//this.heroesTemp = [];
+		//for(var iHeros= 0; iHeros < this.heroesSave.length; iHeros++){
+		//	this.heroesTemp[iHeros] = this.heroesSave[iHeros];
+		//}
+		this.heroesTemp = this.heroesSave;
+		this.heroes = [];
+		
+		// General
+		var isChaine;
+		var isLastChaine;
+		var debutChaine;
+		var finChaine;
+		
+		// Filtres
+		var PuissanceFilter = "";
+		var CouleurFilter = "";
+		var TypeAttaqueFilter = "";
+		
+		// Tableau intermediaire
+		var PuissanceArr = [];
+		var CouleurArr = [];
+		var TypeAttaqueArr = [];
+		
+		var strFilter = this.getAttribute("filter");
+		//console.log('strFilter = '+strFilter);
+		
+		if(strFilter != "" && strFilter) {
+		
+			// Puissance
+			isChaine = strFilter.indexOf("Puissance");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Puissance=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				PuissanceFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log('PuissanceFilter = '+PuissanceFilter);
+			}
+			
+			// Couleur
+			isChaine = strFilter.indexOf("Couleur");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Couleur=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				CouleurFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log('CouleurFilter = '+CouleurFilter);
+			}
+			
+			// TypeAttaque
+			isChaine = strFilter.indexOf("TypeAttaque");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"TypeAttaque=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				TypeAttaqueFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log('TypeAttaqueFilter = '+TypeAttaqueFilter);
+			}
+			
+			// Verification infos
+			if(this.getAttribute("debug") == "true") {
+				console.log((PuissanceFilter != "") || (CouleurFilter != "") || (TypeAttaqueFilter != ""));
+			}
+			if((PuissanceFilter != "") || (CouleurFilter != "") || (TypeAttaqueFilter != "")) {
+			
+				//console.log(this.heroesTemp.length);
+				for(var iHeros= 0; iHeros < this.heroesTemp.length; iHeros++){
+				
+					if(this.getAttribute("debug") == "true") {
+						console.log(this.heroesTemp[iHeros].nom);
+					}
+				
+					// Puissance
+					if(this.heroesTemp[iHeros].puissance == PuissanceFilter) {
+						PuissanceArr[iHeros] = 1;
+					} else {
+						if(PuissanceFilter == "") {
+							PuissanceArr[iHeros] = 1;
+						} else {
+							PuissanceArr[iHeros] = 0;
+						}
+					}
+					//console.log('PuissanceArr[iHeros] : '+PuissanceArr[iHeros]);
+					
+					// Couleur
+					CouleurArr[iHeros] = 0;
+					TypeAttaqueArr[iHeros] = 0;
+					console.log(this.heroesTemp[iHeros].attaques);
+					if((this.heroesTemp[iHeros].attaques[0].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.heroesTemp[iHeros].attaques[0].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							CouleurArr[iHeros] = 1;
+							TypeAttaqueArr[iHeros] = 1;
+						}
+					}
+					if((this.heroesTemp[iHeros].attaques[1].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.heroesTemp[iHeros].attaques[1].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							CouleurArr[iHeros] = 1;
+							TypeAttaqueArr[iHeros] = 1;
+						}
+					}
+					if((this.heroesTemp[iHeros].attaques[2].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.heroesTemp[iHeros].attaques[2].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							CouleurArr[iHeros] = 1;
+							TypeAttaqueArr[iHeros] = 1;
+						}
+					}
+					//console.log('CouleurArr[iHeros] : '+CouleurArr[iHeros]);
+					//console.log('TypeAttaqueArr[iHeros] : '+TypeAttaqueArr[iHeros]);
+					
+					// Resultat
+					if(this.getAttribute("debug") == "true") {
+						console.log(this.heroesTemp[iHeros].nom + ' : ' + PuissanceArr[iHeros] + ',' + CouleurArr[iHeros] + ',' + TypeAttaqueArr[iHeros]);
+					}
+					
+					// Recuperation des heros
+					if (PuissanceArr[iHeros] == 1 && CouleurArr[iHeros] == 1 && TypeAttaqueArr[iHeros] == 1) {
+						this.heroes.push(this.heroesTemp[iHeros]);
+						//console.log(this.heroes);
+					}
+
+				}
+			}
+			
+		} else {
+			this.heroes = this.heroesTemp;
+		}
+		
+		//console.log(this.heroes);
+		
+	},
+    herosLoaded: function() {
+		console.log("heros-service : herosLoaded()");
+		// Make a copy of the loaded data
+		this.heroesSave = this.$.ajax.response.slice(0);
+		console.log("this.heroesSave loaded");
+		console.log(this.heroesSave);
+		this.heroesTemp = this.$.ajax.response.slice(0);
+		
+		// General
+		var isChaine;
+		var isLastChaine;
+		var debutChaine;
+		var finChaine;
+		
+		// Filtres
+		var PuissanceFilter = "";
+		var CouleurFilter = "";
+		var TypeAttaqueFilter = "";
+		
+		// Tableau intermediaire
+		var PuissanceArr = [];
+		var CouleurArr = [];
+		var TypeAttaqueArr = [];
+		
+		var strFilter = this.getAttribute("filter");
+		//console.log(strFilter);
+		
+		if(strFilter != "" && strFilter) {
+		
+			// Puissance
+			isChaine = strFilter.indexOf("Puissance");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Puissance=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				PuissanceFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log(PuissanceFilter);
+			}
+			
+			// Couleur
+			isChaine = strFilter.indexOf("Couleur");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Couleur=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				CouleurFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log(PuissanceFilter);
+			}
+			
+			// TypeAttaque
+			isChaine = strFilter.indexOf("TypeAttaque");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"TypeAttaque=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				TypeAttaqueFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log(PuissanceFilter);
+			}
+			
+			// Verification infos
+			if((PuissanceFilter != "") || (CouleurFilter != "") || (TypeAttaqueFilter != "")) {
+				for(var iHeros= 0; iHeros < this.heroesTemp.length; iHeros++){
+				
+					// Puissance
+					if(this.heroesTemp[iHeros].puissance == PuissanceFilter) {
+						PuissanceArr[iHeros] = 1;
+					} else {
+						if(PuissanceFilter == "") {
+							PuissanceArr[iHeros] = 1;
+						} else {
+							PuissanceArr[iHeros] = 0;
+						}
+					}
+					
+					// Couleur
+					CouleurArr[iHeros] = 0;
+					TypeAttaqueArr[iHeros] = 0;
+					console.log(this.heroesTemp[iHeros].attaques);
+					if((this.heroesTemp[iHeros].attaques[0].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.heroesTemp[iHeros].attaques[0].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							CouleurArr[iHeros] = 1;
+							TypeAttaqueArr[iHeros] = 1;
+						}
+					}
+					if((this.heroesTemp[iHeros].attaques[1].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.heroesTemp[iHeros].attaques[1].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							CouleurArr[iHeros] = 1;
+							TypeAttaqueArr[iHeros] = 1;
+						}
+					}
+					if((this.heroesTemp[iHeros].attaques[2].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.heroesTemp[iHeros].attaques[2].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							CouleurArr[iHeros] = 1;
+							TypeAttaqueArr[iHeros] = 1;
+						}
+					}
+					
+					// Recuperation des heros
+					if (PuissanceArr[iHeros] == 1 && CouleurArr[iHeros] == 1 && TypeAttaqueArr[iHeros] == 1) {
+						this.heroes.push(this.heroesTemp[iHeros]);
+						//console.log(this.heroes);
+					}
+
+				}
+			}
+			
+		} else {
+			this.heroes = this.heroesTemp;
+		}
+		
+		//console.log(this.heroes);
+    },
+	addHeros: function(heros) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : addHeros("+heros+")");
+		}
+    },
+	remHeros: function(heros) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("heros-service : remHeros("+heros+")");
+		}
+		var iHerosRem = -1;
+		for(var iHeros= 0; iHeros < this.heroes.length; iHeros++){
+			if(this.heroes[iHeros].uid == heros) {
+				iHerosRem = iHeros;
+			}
+		}
+		if(iHerosRem > -1) {
+			this.heroes.splice(iHerosRem, 1);
+		}
+    }
+  });
+  </script>
+</polymer-element>

@@ -1,0 +1,103 @@
+﻿<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="technique-card" attributes="nom debug">
+  <template>
+    <style>
+    :host {
+      position: relative;
+      background-color: white;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+	
+    .card-header {
+      margin-right: 10px;
+	  width: 100%;
+    }
+    
+    polyfill-next-selector { content: '.card-header h2'; }
+	.card-header ::content h2 {
+	  margin-bottom: 5px;
+	  font-size: 0.9rem;
+	  font-weight: 300;
+	}
+
+polyfill-next-selector { content: '.card-header img'; }
+	.card-header ::content img {
+	  width: 70px;
+	  border-radius: 10%;
+	  margin: 10px;
+	}
+	
+	#icon_1star {
+	  position: absolute;
+	  top: 3px;
+	  right: 3px;
+	}
+
+	:host([is1Star]) #icon_1star {
+	  fill: #EDFE00;
+	  stroke: black;
+	}
+    
+    </style>
+
+    <div class="card-header" layout vertical center>
+		<content select="#nomHeros"></content>
+		<content select="#nomTechnique"></content>
+		<content select="#couleurTechnique"></content>
+		<content select="#coutTechnique"></content>
+		<content select="#typeTechnique"></content>
+		<content select="#descriptionTechnique"></content>
+    </div>
+	
+	<core-icon id="icon_1star" icon="star"></core-icon>
+	<core-icon id="icon_2star" icon="star"></core-icon>
+	<core-icon id="icon_3star" icon="star"></core-icon>
+	<core-icon id="icon_4star" icon="star"></core-icon>
+    
+  </template>
+  <script>
+  Polymer({
+	publish: {
+        nom: {
+			reflect: true
+        },
+		debug: {
+			reflect: true
+		}
+    },
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-card : created("+this.getAttribute("nom")+")");
+		}
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-card : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-card : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-card : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-card : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-card : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+	}
+  });
+  </script>
+</polymer-element>

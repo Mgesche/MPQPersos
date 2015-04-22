@@ -1,0 +1,411 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
+<!-- 
+  `<post-service>` provides an API for a fake service -- 
+  _unquote_, the read-only social networking service!
+
+  Provides a very simple API: `posts` returns the list of posts.
+  `setFavorite` pretends to persist a user's favorite choice.
+
+  @element post-service
+  @demo 
+  @homepage http://www.polymer-project.org/docs/start/tutorial.html
+-->
+
+<!--
+  An array of post objects, with the following format:
+
+  <table border="0">
+    <tr>
+      <td><code>uid</code></td>
+      <td>Number</td>
+      <td>Unique ID for this post.</td>
+    </tr>
+     <tr>
+      <td><code>username</code></td>
+      <td>String</td>
+      <td>Poster's username.</td>
+    </tr>
+    <tr>
+      <td><code>avatar</code></td>
+      <td>String</td>
+      <td>URL for the user's avatar.</td>
+    </tr>  
+         <tr>
+      <td><code>text</code></td>
+      <td>String</td>
+      <td>Post text.</td>
+    </tr>  
+    <tr>
+      <td><code>favorite</code></td>
+      <td>Boolean</td>
+      <td>True if the current user favorited this post.</td>
+    </tr>
+  </table>
+  
+  @attribute posts 
+  @type Array
+  @default []
+-->
+<polymer-element name="technique-service" attributes="techniques filter nom debug">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+	  param="{'refr': true}"
+      url="../api/Heros.json"
+      on-core-response="{{techniquesLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  
+  var techniquesSave = [];
+  
+  Polymer('technique-service', {
+	publish: {
+		nom: {
+			reflect: true
+		},
+		debug: {
+			reflect: true
+		},
+		filter: {
+			reflect: true
+		}
+	},
+	created: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-service : created("+this.getAttribute("nom")+")");
+		}
+		this.techniquesTemp = [];
+		this.techniques = [];
+	},
+	ready: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-service : ready("+this.getAttribute("nom")+")");
+		}
+	},
+	attached: function () {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-service : attached("+this.getAttribute("nom")+")");
+		}
+	},
+	domReady: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-service : domReady("+this.getAttribute("nom")+")");
+		}
+	},
+	detached: function() {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-service : detached("+this.getAttribute("nom")+")");
+		}
+	},
+	attributeChanged: function(attrName, oldVal, newVal) {
+		if(this.getAttribute("debug") == "true") {
+			console.log("technique-service : attributeChanged("+this.getAttribute("nom")+","+attrName+","+oldVal+","+newVal);
+		}
+		
+		// ToDo : factoriser
+		// Make a copy of the loaded data
+		//this.techniquesTemp = [];
+		//for(var iHeros= 0; iHeros < this.techniquesSave.length; iHeros++){
+		//	this.techniquesTemp[iHeros] = this.techniquesSave[iHeros];
+		//}
+		this.techniquesTemp = this.techniquesSave;
+		this.techniques = [];
+		
+		// General
+		var isChaine;
+		var isLastChaine;
+		var debutChaine;
+		var finChaine;
+		
+		// Filtres
+		var PuissanceFilter = "";
+		var CouleurFilter = "";
+		var TypeAttaqueFilter = "";
+		
+		// Tableau intermediaire
+		var PuissanceArr = [];
+		var CouleurArr = [];
+		var TypeAttaqueArr = [];
+		
+		var strFilter = this.getAttribute("filter");
+		//console.log('strFilter = '+strFilter);
+		
+		if(strFilter != "" && strFilter) {
+		
+			// Puissance
+			isChaine = strFilter.indexOf("Puissance");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Puissance=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				PuissanceFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log('PuissanceFilter = '+PuissanceFilter);
+			}
+			
+			// Couleur
+			isChaine = strFilter.indexOf("Couleur");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Couleur=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				CouleurFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log('CouleurFilter = '+CouleurFilter);
+			}
+			
+			// TypeAttaque
+			isChaine = strFilter.indexOf("TypeAttaque");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"TypeAttaque=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				TypeAttaqueFilter = strFilter.substring(debutChaine, finChaine);
+				//console.log('TypeAttaqueFilter = '+TypeAttaqueFilter);
+			}
+			
+			// Verification infos
+			console.log((PuissanceFilter != "") || (CouleurFilter != "") || (TypeAttaqueFilter != ""));
+			if((PuissanceFilter != "") || (CouleurFilter != "") || (TypeAttaqueFilter != "")) {
+			
+				//console.log(this.techniquesTemp.length);
+				for(var iTechnique= 0; iTechnique < this.techniquesTemp.length; iTechnique++){
+				
+					//console.log(this.techniquesTemp[iTechnique].nom);
+				
+					// Puissance
+					if(this.techniquesTemp[iTechnique].puissanceHeros == PuissanceFilter) {
+						PuissanceArr[iTechnique] = 1;
+					} else {
+						if(PuissanceFilter == "") {
+							PuissanceArr[iTechnique] = 1;
+						} else {
+							PuissanceArr[iTechnique] = 0;
+						}
+					}
+					//console.log('PuissanceArr[iTechnique] : '+PuissanceArr[iTechnique]);
+					
+					// Couleur
+					CouleurArr[iTechnique] = 0;
+					TypeAttaqueArr[iTechnique] = 0;
+					if((this.techniquesTemp[iTechnique].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.techniquesTemp[iTechnique].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							if(PuissanceArr[iTechnique] == 1) {
+								this.techniques.push(this.techniquesTemp[iTechnique]);
+							}
+						}
+					}
+					
+					// Resultat
+					//console.log(this.techniquesTemp[iHeros].nom + ' : ' + PuissanceArr[iHeros] + ',' + CouleurArr[iHeros] + ',' + TypeAttaqueArr[iHeros]);
+				}
+			}
+			
+		} else {
+			this.techniques = this.techniquesTemp;
+		}
+		
+		//console.log(this.techniques);
+		
+	},
+    techniquesLoaded: function() {
+		console.log("technique-service : techniquesLoaded()");
+		// Make a copy of the loaded data
+		this.techniquesSave = [];
+		for(var iHeros= 0; iHeros < this.$.ajax.response.slice(0).length; iHeros++){
+			laTechnique = {
+							uidHeros : this.$.ajax.response.slice(0)[iHeros].uid,
+							nomHeros : this.$.ajax.response.slice(0)[iHeros].nom,
+							puissanceHeros : this.$.ajax.response.slice(0)[iHeros].puissance,
+							nom : this.$.ajax.response.slice(0)[iHeros].attaques[0].nom,
+							couleur : this.$.ajax.response.slice(0)[iHeros].attaques[0].couleur,
+							description : this.$.ajax.response.slice(0)[iHeros].attaques[0].description,
+							cout : this.$.ajax.response.slice(0)[iHeros].attaques[0].cout,
+							type : this.$.ajax.response.slice(0)[iHeros].attaques[0].type
+						};
+			this.techniquesSave.push(laTechnique);
+			laTechnique = {
+							uidHeros : this.$.ajax.response.slice(0)[iHeros].uid,
+							nomHeros : this.$.ajax.response.slice(0)[iHeros].nom,
+							puissanceHeros : this.$.ajax.response.slice(0)[iHeros].puissance,
+							nom : this.$.ajax.response.slice(0)[iHeros].attaques[1].nom,
+							couleur : this.$.ajax.response.slice(0)[iHeros].attaques[1].couleur,
+							description : this.$.ajax.response.slice(0)[iHeros].attaques[1].description,
+							cout : this.$.ajax.response.slice(0)[iHeros].attaques[1].cout,
+							type : this.$.ajax.response.slice(0)[iHeros].attaques[1].type
+						};
+			this.techniquesSave.push(laTechnique);
+			laTechnique = {
+							uidHeros : this.$.ajax.response.slice(0)[iHeros].uid,
+							nomHeros : this.$.ajax.response.slice(0)[iHeros].nom,
+							puissanceHeros : this.$.ajax.response.slice(0)[iHeros].puissance,
+							nom : this.$.ajax.response.slice(0)[iHeros].attaques[2].nom,
+							couleur : this.$.ajax.response.slice(0)[iHeros].attaques[2].couleur,
+							description : this.$.ajax.response.slice(0)[iHeros].attaques[2].description,
+							cout : this.$.ajax.response.slice(0)[iHeros].attaques[2].cout,
+							type : this.$.ajax.response.slice(0)[iHeros].attaques[2].type
+						};
+			this.techniquesSave.push(laTechnique);
+		}
+		console.log("this.techniquesSave loaded");
+		console.log(this.techniquesSave);
+		this.techniquesTemp = this.techniquesSave;
+		
+		// General
+		var isChaine;
+		var isLastChaine;
+		var debutChaine;
+		var finChaine;
+		
+		// Filtres
+		var PuissanceFilter = "";
+		var CouleurFilter = "";
+		var TypeAttaqueFilter = "";
+		
+		// Tableau intermediaire
+		var PuissanceArr = [];
+		var CouleurArr = [];
+		var TypeAttaqueArr = [];
+		
+		// Retour
+		var laTechnique = {};
+		
+		var strFilter = this.getAttribute("filter");
+		if(this.getAttribute("debug") == "true") {
+			console.log("strFilter : "+strFilter);
+		}
+		
+		if(strFilter != "" && strFilter) {
+		
+			// Puissance
+			isChaine = strFilter.indexOf("Puissance");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Puissance=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				PuissanceFilter = strFilter.substring(debutChaine, finChaine);
+				if(this.getAttribute("debug") == "true") {
+					console.log("PuissanceFilter : "+PuissanceFilter);
+				}
+			}
+			
+			// Couleur
+			isChaine = strFilter.indexOf("Couleur");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"Couleur=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				CouleurFilter = strFilter.substring(debutChaine, finChaine);
+				if(this.getAttribute("debug") == "true") {
+					console.log("CouleurFilter : "+CouleurFilter);
+				}
+			}
+			
+			// TypeAttaque
+			isChaine = strFilter.indexOf("TypeAttaque");
+			//console.log(isChaine);
+			if(isChaine>-1) {
+				debutChaine = isChaine+"TypeAttaque=".length;
+				//console.log(debutChaine);
+				isLastChaine = strFilter.indexOf(";", debutChaine);
+				//console.log(isLastChaine);
+				if(isLastChaine>-1) {
+					finChaine = isLastChaine;
+				} else {
+					finChaine = strFilter.length;
+				}
+				//console.log(finChaine);
+				TypeAttaqueFilter = strFilter.substring(debutChaine, finChaine);
+				if(this.getAttribute("debug") == "true") {
+					console.log("TypeAttaqueFilter : "+TypeAttaqueFilter);
+				}
+			}
+			
+			// Verification infos
+			if((PuissanceFilter != "") || (CouleurFilter != "") || (TypeAttaqueFilter != "")) {
+				for(var iTechnique= 0; iTechnique < this.techniquesTemp.length; iTechnique++){
+				
+					// Puissance
+					if(this.techniquesTemp[iTechnique].puissanceHeros == PuissanceFilter) {
+						PuissanceArr[iTechnique] = 1;
+					} else {
+						if(PuissanceFilter == "") {
+							PuissanceArr[iTechnique] = 1;
+						} else {
+							PuissanceArr[iTechnique] = 0;
+						}
+					}
+					if(this.getAttribute("debug") == "true") {
+						console.log("PuissanceArr["+iTechnique+"] : "+PuissanceArr[iTechnique]);
+					}
+					
+					// Couleur et type d'attaque
+					CouleurArr[iTechnique] = 0;
+					TypeAttaqueArr[iTechnique] = 0;
+					if((this.techniquesTemp[iTechnique].couleur == CouleurFilter) || (CouleurFilter == "")) {
+						if((this.techniquesTemp[iTechnique].type == TypeAttaqueFilter) || (TypeAttaqueFilter == "")) {
+							if(PuissanceArr[iTechnique] == 1) {
+								this.techniques.push(this.techniquesTemp[iTechnique]);
+							}
+						}
+					}
+					
+				}
+			}
+			
+		} else {
+			this.techniques = this.techniquesTemp;
+		}
+		
+		console.log("Liste des techniques");
+		console.log(this.techniques);
+    }
+  });
+  </script>
+</polymer-element>
