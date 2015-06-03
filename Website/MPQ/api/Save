@@ -1,0 +1,460 @@
+[
+	{
+    "uid": "Iron Man (Model 35)",
+    "nom": "Iron Man (Model 35)",
+    "img": "http://vignette1.wikia.nocookie.net/marvelpuzzlequest/images/0/0b/Iron_Man_%28Model_35%29.png/revision/latest/scale-to-width/260?cb=20141030162043",
+    "puissance": "1",
+    "description": "Tony Stark is an inventor and industrialist, constantly working to improve his Iron Man armor, He inherited his multi-billion dollar company, Stark Industries, from his father Howard.",
+    "attaques" : [
+        {
+            "nom" : "Repulsor Blast",
+            "couleur" : "red",
+            "description" : "A high-impact kinetic blast from Iron Man's hand deals 63 damage to the target.",
+            "cout" : "10",
+            "type" : [{"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Armored Assault",
+            "couleur" : "yellow",
+            "description" : "Iron Man charges to the fore and positions his armor to shield his allies, creating 2 Protect tiles of strength X. From there he unleashes his weaponry, dealing 25 damage.",
+            "cout" : "8",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Protection"}]
+        },
+        {
+            "nom" : "Ultra-Freon Beam",
+            "couleur" : "blue",
+            "description" : "The World's Greatest Engineer freezes the target, stunning them for 1 turn and dealing 125 damage.",
+            "cout" : "19",
+            "type" : [{"Effet":"Degat"},{"Effet":"Paralysie"}]
+        }]
+    },
+    {
+    "uid": "Black Widow (Modern)",
+    "nom": "Black Widow (Modern)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/b/be/Black_Widow_%28Modern%29.png/revision/latest/scale-to-width/260?cb=20141030162009",
+    "puissance": "1",
+    "description": "Trained by secret KGB \"Red Room\" program, Natasha Romanova was originally sent by the Russians to steal defense secrets from Tony Stark.",
+    "attaques" : [
+        {
+            "nom" : "Aggressive Recon",
+            "couleur" : "purple",
+            "description" : "Natasha goes undercover to find her opponent’s secrets. She steals 2 Yellow, Blue, Red, and Green AP, undermining the enemy's plans and setting hers into motion.",
+            "cout" : "10",
+            "type" : [{"Effet":"Vol"}]
+        },
+        {
+            "nom" : "Widow's Sting",
+            "couleur" : "blue",
+            "description" : "A dart from Black Widow's bracelets strikes the target and releases an electrical charge, stunning them for 2 turns.",
+            "cout" : "9",
+            "type" : [{"Effet":"Paralysie"}]
+        }]
+    },
+    {
+    "uid": "Hawkeye (Classic)",
+    "nom": "Hawkeye (Classic)",
+    "img": "http://vignette2.wikia.nocookie.net/marvelpuzzlequest/images/d/dd/Hawkeye_%28Classic%29.png/revision/latest/scale-to-width/260?cb=20141030162040",
+    "puissance": "1",
+    "description": "Clint Barton wasn't exposed to any extraordinary radiation. He has no X-gene, no mystical artifacts, and no bottomless bank account. He has just practiced, every single day.",
+    "attaques" : [
+        {
+            "nom" : "Take Aim",
+            "couleur" : "purple",
+            "description" : "Hawkeye prepares to place the perfect shot, turning a selected basic Purple tile into a Critical tile.",
+            "cout" : "8",
+            "type" : [{"Effet":"Critical"}]
+        },
+        {
+            "nom" : "Arrow Stab",
+            "couleur" : "red",
+            "description" : "No bow, no problem. Clint lunges forward, arrow in hand, clearing a selected row and dealing damage (but not generating AP).",
+            "cout" : "11",
+            "type" : [{"Effet":"Degat"}]
+        }]
+    },
+    {
+    "uid": "Juggernaut (Classic)",
+    "nom": "Juggernaut (Classic)",
+    "img": "http://vignette2.wikia.nocookie.net/marvelpuzzlequest/images/4/46/Juggernaut_%28Classic%29.png/revision/latest/scale-to-width/260?cb=20141030162054",
+    "puissance": "1",
+    "description": "Once Cain Marko has built up any momentum, there is almost nothing in the universe that can slow him down or halt his charge.",
+    "attaques" : [
+        {
+            "nom" : "Unstoppable Crash",
+            "couleur" : "green",
+            "description" : "Juggernaut's momentum sends him barreling through the battlefield, destroying 16 random tiles. Does not generate AP.",
+            "cout" : "10",
+            "type" : [{"Effet":"Destruction"}]
+        },
+        {
+            "nom" : "Headbutt",
+            "couleur" : "red",
+            "description" : "Juggernaut slams head-first into the enemy, dealing 125 damage to the target and 63 damage to himself.",
+            "cout" : "10",
+            "type" : [{"Effet":"Degat"},{"Effet":"Sacrifice"}]
+        }]
+    },
+    {
+    "uid": "Storm (Modern)",
+    "nom": "Storm (Modern)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/a/a5/Storm_%28Modern%29.png/revision/latest/scale-to-width/260?cb=20141030162120",
+    "puissance": "1",
+    "description": "When her mutant weather-control powers first manifested, Ororo Munroe brought many days of rain to save a village at the foot of Kilimanjaro. This caused a drought in surrounding villages, killing hundreds of animals, until Ororo learned to work with the natural order.",
+    "attaques" : [
+        {
+            "nom" : "Lightning Strike",
+            "couleur" : "green",
+            "description" : "Storm calls a blinding bolt of electricity from the heavens, shattering 8 tiles, doing damage and earning AP for each.",
+            "cout" : "10",
+            "type" : [{"Effet":"Destruction"},{"Effet":"Generation_AP"}]
+        },
+        {
+            "nom" : "Mistress of the Elements",
+            "couleur" : "yellow",
+            "description" : "Clouds darken the battlefield and lightning steaks across the sky as Storm's awesome power inspires her teammates and assults her foes. Destroys up to 5 Team-Up tiles, generating Team-Up AP and dealing 4 damage per tile.",
+            "cout" : "9",
+            "type" : [{"Effet":"Destruction_Team"},{"Effet":"Generation_Team"},{"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Hailstorm",
+            "couleur" : "black",
+            "description" : "Ororo glares and dark clouds coalesce. Hailstones pelt the enemy, converting 16 basic tiles to Attack tiles.",
+            "cout" : "9",
+            "type" : [{"Effet":"Attaque"}]
+        }]
+    },
+    {
+    "uid": "Venom (Dark Avengers)",
+    "nom": "Venom (Dark Avengers)",
+    "img": "http://vignette1.wikia.nocookie.net/marvelpuzzlequest/images/b/be/Venom_%28Dark_Avengers_Spider-Man%29.png/revision/latest/scale-to-width/260?cb=20141030162143",
+    "puissance": "1",
+    "description": "This alien symbiote originally attached itself to Spider-Man, gaining some of his powers. Mac Gargan' formerly the Scorpion, bonded with the creature before joining the Thunderbolts.",
+    "attaques" : [
+        {
+            "nom" : "Devour",
+            "couleur" : "black",
+            "description" : "If there are at least 6 Web tiles on the board, Venom grabs his target and eats them whole, destroying all Web tiles. Otherwise, he bites for 31 damage.",
+            "cout" : "12",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Assassinat"}, {"Effet":"Utilisation_Toile"}]
+        },
+        {
+            "nom" : "Symbiote Snare",
+            "couleur" : "purple",
+            "description" : "Venom sends out his tendrils like a rope, wrapping up an enemy to stun them for 1 turn. The tendrils leave their mark on the battlefield as Venom stalks his prey; add 1 Green Web tile to the board.",
+            "cout" : "7",
+            "type" : [{"Effet":"Creation_Toile"},{"Effet":"Paralysie"}]
+        }]
+    },
+    {
+    "uid": "Yelena Belova (Dark Avengers)",
+    "nom": "Yelena Belova (Dark Avengers)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/0/02/Yelena_Belova_%28Dark_Avengers_Widow%29.png/revision/latest/scale-to-width/260?cb=20141030162157",
+    "puissance": "1",
+    "description": "The second spy to use the code name Black Widow, Yelena lacks Natasha's morals. She has often tried to kill her predecessor to prove that she alone deserves the title.",
+    "attaques" : [
+        {
+            "nom" : "Lethal Recon",
+            "couleur" : "purple",
+            "description" : "Yelena goes undercover to damage her opponents. She steals Yellow, Blue, Red, and Green AP, undermining the enemy's plans and doing 31 damage.",
+            "cout" : "13",
+            "type" : [{"Effet":"Vol"},{"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Payback Mission",
+            "couleur" : "black",
+            "description" : "The enemy may have thought they were in control, but Yelena's plans for revenge have been put into motion. Turns one enemy-owned special tile into a Critical tile and hits the target for 31 damage.",
+            "cout" : "13",
+            "type" : [{"Effet":"Critical"},{"Effet":"Degat"},{"Effet":"Destruction_Special"}]
+        }]
+    },
+    {
+    "uid": "Elektra (Unkillable)",
+    "nom": "Elektra (Unkillable)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/7/75/Elektra_%28Unkillable%29.png/revision/latest/scale-to-width/260?cb=20141215221042",
+    "puissance": "4",
+    "description": "When she was 9 years old, Elektra was kidnapped. After which, her father insisted she learn self-defense. She became an accomplished martial artist and trained with The Hand, a mysterious sect of ninjas. Today she is one of the world's top assassins and martial artists.",
+    "attaques" : [
+        {
+            "nom" : "Double-Double Cross",
+            "couleur" : "purple",
+            "description" : "Elektra has \"defected\" to the enemy team, working for them while feeding her true allies powerful information. Elektra steals 1 enemy Strike tile, improving its strength by 73, but she also converts 3 random Purple basic tiles into enemy Strike tiles of strength 9.",
+            "cout" : "7",
+            "type" : [{"Effet":"Vole_Special"},{"Effet":"Cree_Special_Ennemi"}]
+        },
+        {
+            "nom" : "Shadow Step",
+            "couleur" : "black",
+            "description" : "Elektra senses an attack coming and prepares to dodge into the shadows. She converts 2 random basic Black tiles into Trap tiles. If Elektra would take damage, the damage is negated and a Trap tile is destroyed, generating AP and dealing 274 damage.",
+            "cout" : "10",
+            "type" : [{"Effet":"Bouclier"},{"Effet":"Generation_AP"},{"Effet":"Degat"},{"Effet":"Piege"}]
+        },
+        {
+            "nom" : "Ballet of Death",
+            "couleur" : "red",
+            "description" : "Death is a dance and only Elektra knows the next step. She converts a random Red basic tile into a Trap tile. It deals 150 damage to the target enemy at the beginning of every turn.",
+            "cout" : "8",
+            "type" : [{"Effet":"Attaque"}]
+        }]
+    },
+    {
+    "uid": "Devil Dinosaur (Gigantic Reptile)",
+    "nom": "Devil Dinosaur (Gigantic Reptile)",
+    "img": "http://vignette4.wikia.nocookie.net/marvelpuzzlequest/images/f/fa/Devil_Dinosaur_%28Gigantic_Reptile%29.png/revision/latest/scale-to-width/260?cb=20141010182423",
+    "puissance": "4",
+    "description": "After being attacked and nearly burnt to death by an evil tribe, the Killer-Folk, Devil Dino is rescued by Moon-Boy. The incident activated a powerful mutation in Devil Dino giving him tremendous strength and turning his skin red.",
+    "attaques" : [
+        {
+            "nom" : "Prehistoric Bite",
+            "couleur" : "green",
+            "description" : "Devil Dinosaur grabs the target in his fierce jaws, dealing 301 damage.",
+            "cout" : "7",
+            "type" : [{"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Prehistoric Chomp",
+            "couleur" : "red",
+            "description" : "Devil Dinosaur snatches the enemy with his massive teeth, dealing 301 damage.",
+            "cout" : "7",
+            "type" : [{"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Prehistoric Arms",
+            "couleur" : "purple",
+            "description" : "Devil Dinosaur waves his foreshortened forearms ferociously, moving one Black tile to the top left of the board.",
+            "cout" : "3",
+            "type" : [{"Effet":"Deplacement"}]
+        }]
+    },
+    {
+    "uid": "Invisible Woman (Classic)",
+    "nom": "Invisible Woman (Classic)",
+    "img": "http://vignette1.wikia.nocookie.net/marvelpuzzlequest/images/1/1a/Invisible_Woman_%28Classic%29.png/revision/latest/scale-to-width/260?cb=20141002171156&format=webp",
+    "puissance": "4",
+    "description": "A founding member of The Fantastic Four, Sue Richards is a true leader and fiercely loyal to those she cares about. The magnitude of Invisible Woman's psionic power is legendary.",
+    "attaques" : [
+        {
+            "nom" : "Grant Invisibility",
+            "couleur" : "yellow",
+            "description" : "The Invisible Woman hides the weakest member of the team. Converts a random basic Yellow tile into an Invisibility tile. While it's on the board, the invisible character can't be targeted.",
+            "cout" : "9",
+            "type" : [{"Effet":"Tank"}]
+        },
+        {
+            "nom" : "Force Bubbles",
+            "couleur" : "blue",
+            "description" : "Susan focuses her power to lock the enemy down and save the team. Locks 2 chosen basic tiles in Force Bubbles before creating a Blue Protect tile of strength 64.",
+            "cout" : "7",
+            "type" : [{"Effet":"Protection"}, {"Effet":"Protection_Symbole"}]
+        },
+        {
+            "nom" : "Force Field Crush",
+            "couleur" : "green",
+            "description" : "Invisible Woman shatters the tiles surrounding 2 random Force Bubbles. Does not generate AP. Each Force Bubble deals 64 damage and is unlocked (but not destroyed). If there are no Force Bubbles, she creates 2 in random locations.",
+            "cout" : "12",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Protection_Symbole"}]
+        }]
+    },
+    {
+    "uid": "Iron Man (Hulkbuster)",
+    "nom": "Iron Man (Hulkbuster)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/7/7d/Iron_Man_%28Hulkbuster%29.png/revision/latest/scale-to-width/260?cb=20150511200717",
+    "puissance": "4",
+    "description": "Of all the 'buster' suits that Tony Stark has built over the years, the Hulkbuster is by far the biggest, and the most iconic. It's designed for one thing, fighting the Hulk, but it turns out it's pretty good at fighting other things too.",
+    "attaques" : [
+        {
+            "nom" : "Repulsor Punch",
+            "couleur" : "red",
+            "description" : "Iron Man pours his energy reserves into his next punch, using repulsors in his elbow for extra force. Depletes his teams Red AP, dealing 76 damage for each.",
+            "cout" : "9",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Vide_AP"}]
+        },
+        {
+            "nom" : "Overdrive",
+            "couleur" : "black",
+            "description" : "Tony recklessly diverts power from his heart's Arc Reactor to give his suit more firepower. Deals 776 damage to Iron Man, but gains 5 Red AP and creates 2 Yellow Strike tiles of strength 64.",
+            "cout" : "11",
+            "type" : [{"Effet":"Sacrifice"}, {"Effet":"Generation_AP"}, {"Effet":"Augmentation"}]
+        },
+        {
+            "nom" : "Hulk-Proof",
+            "couleur" : "blue",
+            "description" : "The Hulkbuster suit deploys Hulk countermeasures and powers up shielding, ready for incoming damage. Converts 4 basic Green tiles to Red and creates 1 blue Protect tile of strength 18.",
+            "cout" : "9",
+            "type" : [{"Effet":"Protection"}, {"Effet":"Conversion"}]
+        }]
+    },
+    {
+    "uid": "Kingpin (Wilson Fisk)",
+    "nom": "Kingpin (Wilson Fisk)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/6/6d/Kingpin_%28Wilson_Fisk%29.png/revision/latest/scale-to-width/260?cb=20150407191424",
+    "puissance": "4",
+    "description": "Wilson Fisk is not a nice man. Growing up in New York City he became involved with organized crime at an early age. Now he's the most ruthless crime lord the world's ever seen. He's been the leader of the Maggia and the Hand and employs a coterie of colorful assassins.",
+    "attaques" : [
+        {
+            "nom" : "Wilson's Gambit",
+            "couleur" : "black",
+            "description" : "The Kingpin pushes one of his pawns forward in a sacrifice play to fuel a savage reprisal. Kingpin deals 448 damage to the target. If there is a friendly Countdown tile on the board, Kingpin destroys it and deals an additional 776 damage.",
+            "cout" : "6",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Destruction_Special_Allie"}]
+        },
+        {
+            "nom" : "The Fisk Defence",
+            "couleur" : "purple",
+            "description" : "Seeing through his enemy's ruse, Wilson Fisk dismantles their position and strengthens his own. He destroys 4 AP of the enemy's strongest color and generates 4 Yellow AP.",
+            "cout" : "8",
+            "type" : [{"Effet":"Vol"}]
+        },
+        {
+            "nom" : "Maggia Pawns",
+            "couleur" : "yellow",
+            "description" : "Kingpin commands a force rivaling some armies, he pushes his pawns forward to harass his enemies. Kingpin creates 2 Maggia Thug Countdown tiles that deal 731 damage.",
+            "cout" : "10",
+            "type" : [{"Effet":"Piege"}, {"Effet":"Degat"}]
+        }]
+    },
+    {
+    "uid": "Nick Fury (Director of S.H.I.E.L.D.)",
+    "nom": "Nick Fury (Director of S.H.I.E.L.D.)",
+    "img": "http://vignette3.wikia.nocookie.net/marvelpuzzlequest/images/d/dc/Nick_Fury_%28Director_of_S.H.I.E.L.D.%29.png/revision/latest/scale-to-width/260?cb=20141002171417",
+    "puissance": "4",
+    "description": "Nick Fury, Jr. followed in his father's footsteps to become Director of S.H.I.E.L.D. Raised Marcus Johnson, he inherited the benefits of the Infinity Formula, slowing his aging and accelerating his healing. Director Fury is a worthy combatant due to his military training and relentless physical conditioning. What makes him truly formidable is his executive access to the technology, operatives, intelligence, and affiliations of S.H.I.E.L.D.",
+    "attaques" : [
+        {
+            "nom" : "Avengers Assemble!",
+            "couleur" : "yellow",
+            "description" : "With the world in peril, Director Fury summons Earth's Mightiest Heroes. The Sentinel of Liberty, Captain America, is first on the scene. (Creates two 82 strength Protect tiles)",
+            "cout" : "12",
+            "type" : [{"Effet":"Protection"}]
+        },
+        {
+            "nom" : "Demolition",
+            "couleur" : "blue",
+            "description" : "Fury directs his agents to set traps at reported enemy locations. Creates 2 trap tiles that, when matched by the enemy, detonate in unison dealing 758 damage each (but not generating AP). If you match a trap it detonates dealing 379 damage. Enemies cannot see the trap.",
+            "cout" : "10",
+            "type" : [{"Effet":"Piege"}, {"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Escape Plan",
+            "couleur" : "purple",
+            "description" : "Enemy intel stolen, Nick Fury leads his team to safety. Deals 457 damage and creates a 3 turn Countdown tile that, when activated, steals 3 AP from the enemy's strongest color before converting to a strength 91 Strike tile.",
+            "cout" : "12",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Piege"}, {"Effet":"Vol"}, {"Effet":"Attaque"}]
+        }]
+    },
+    {
+    "uid": "Professor X (Charles Xavier)",
+    "nom": "Professor X (Charles Xavier)",
+    "img": "http://vignette4.wikia.nocookie.net/marvelpuzzlequest/images/1/13/Professor_X_%28Charles_Xavier%29.png/revision/latest/scale-to-width/260?cb=20150311162317&format=webp",
+    "puissance": "4",
+    "description": "Professor Charles Xavier dedicates his life to realizing the dream of peaceful co-existence between mutants and humans. Founder and Headmaster of Xavier's School for Gifted Youngsters, Professor X teaches young mutants how to use their powers responsibly.",
+    "attaques" : [
+        {
+            "nom" : "Master Plan",
+            "couleur" : "blue",
+            "description" : "(PASSIVE) In rigorous training sessions, Professor X teaches his allies to recognize tactical openings. Whenever Professor X's team makes a Match-5 or greater, it generates 1 AP in his team's strongest color and deals an additional 941 damage.",
+            "cout" : "0",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Generation_AP"}, {"Effet":"Passif"}]
+        },
+        {
+            "nom" : "Blind Spot",
+            "couleur" : "purple",
+            "description" : "Entering his enemy's minds, Professor X blocks any sensory input that might reveal his presence. Creates an Invisibility tile that targets Professor X, if one does not exist.",
+            "cout" : "7",
+            "type" : [{"Effet":"Invisibilite"}]
+        },
+        {
+            "nom" : "Psychic Convergence",
+            "couleur" : "yellow",
+            "description" : "(PASSIVE) Charles Xavier psychically communicates with his allies, coordinating their greatest strengths. Whenever an ally of Professor X fires a power, it also converts a random basic tile to a strength 21 Protect tile.",
+            "cout" : "0",
+            "type" : [{"Effet":"Passif"}, {"Effet":"Protection"}]
+        }]
+    },
+    {
+    "uid": "Star-Lord (Legendary Outlaw)",
+    "nom": "Star-Lord (Legendary Outlaw)",
+    "img": "http://vignette4.wikia.nocookie.net/marvelpuzzlequest/images/4/49/Star-Lord_%28Legendary_Outlaw%29.png/revision/latest/scale-to-width/260?cb=20150127180827",
+    "puissance": "4",
+    "description": "Peter Quill, also known as Star-Lord, is a thief, a liar, and a cheat. He's also a pretty good guy. The son of the king of Spartax and a woman from Earth, Star-Lord's saved the universe from certain destruction more times that he can count. He united the Guardians of the Galaxy during the Phalanx Conquest and has been their fearless leader ever since.",
+    "attaques" : [
+        {
+            "nom" : "Sleight of Hand",
+            "couleur" : "purple",
+            "description" : "Peter pulls the old switcheroo and swaps one of his enemy's possessions with a little surprise. He turns a selected non-Countdown tile into a 3-turn Countdown tile which deals 785 damage to the enemy.",
+            "cout" : "10",
+            "type" : [{"Effet":"Piege"}, {"Effet":"Degat"}]
+        },
+        {
+            "nom" : "Everyone With Me",
+            "couleur" : "yellow",
+            "description" : "Star-Lord quickly pulls together a plan, or at least most of one. Places a 3-turn Countdown tile. While at least one such tile is on the board, all friendly Red and Yellow ability costs are reduced by 1.",
+            "cout" : "7",
+            "type" : [{"Effet":"Piege"}, {"Effet":"Reduction_Cout"}]
+        },
+        {
+            "nom" : "Oldest Trick in the Book",
+            "couleur" : "red",
+            "description" : "Star-Lord points past his enemy and shouts \"Hey! Is that Beta Ray Bill?\" before swinging in with a sucker-punch. He creates a 2-turn Countdown tile which deals 612 damage. While at least one such tile is on the board, all enemy Red and Green ability costs are increased by 1.",
+            "cout" : "8",
+            "type" : [{"Effet":"Piege"}, {"Effet":"Degat"}, {"Effet":"Augmentation_Cout"}]
+        }]
+    },
+    {
+    "uid": "Thor (Goddess of Thunder)",
+    "nom": "Thor (Goddess of Thunder)",
+    "img": "http://vignette2.wikia.nocookie.net/marvelpuzzlequest/images/6/69/Thor_%28Goddess_of_Thunder%29.png/revision/latest/scale-to-width/260?cb=20141016143858",
+    "puissance": "4",
+    "description": "Whoever Holds This Hammer If She Be Worthy, Shall Possess the Power of... THOR.",
+    "attaques" : [
+        {
+            "nom" : "Smite",
+            "couleur" : "red",
+            "description" : "The gathering lightning strikes Mjolnir as Thor brings the hammer down onto her enemy. Deals 886 damage to the enemy and an additional 137 damage for each Charged tile on the board, then converts X random Basic Red, Blue or Yellow tiles into Charged tiles.",
+            "cout" : "10",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Cree_Charge"}, {"Effet":"Utilisation_Charge"}]
+        },
+        {
+            "nom" : "Striking Distance",
+            "couleur" : "yellow",
+            "description" : "Thor flings Mjolnir at an impossible speed towards her enemies, the impact dashing their plan of attack. Deals 356 damage to the enemy team and converts 1 enemy Strike, Protect, or Attack tile into a Charged tile.",
+            "cout" : "12",
+            "type" : [{"Effet":"Degat_Equipe"}, {"Effet":"Destruction_Special"}, {"Effet":"Cree_Charge"}]
+        },
+        {
+            "nom" : "Power Surge",
+            "couleur" : "blue",
+            "description" : "Thor raises Mjolnir to the sky, summoning a lightning storm to shock and stagger her foes. Stuns the enemy for 1 turn and converts 2 random Red, Blue, or Yellow basic tiles into Charged tiles.",
+            "cout" : "9",
+            "type" : [{"Effet":"Paralysie"}, {"Effet":"Cree_Charge"}]
+        }]
+    },
+    {
+    "uid": "Wolverine (X-Force)",
+    "nom": "Wolverine (X-Force)",
+    "img": "http://vignette1.wikia.nocookie.net/marvelpuzzlequest/images/0/06/Wolverine_%28X-Force%29.png/revision/latest/scale-to-width/260?cb=20141002171601",
+    "puissance": "4",
+    "description": "X-Force does what needs doing to protect mutantkind when no one else will. Master hunter Wolverine leads the X-Men's secret assassination squad.",
+    "attaques" : [
+        {
+            "nom" : "X-Force",
+            "couleur" : "green",
+            "description" : "Wolverine unleashes his berserker rage, cutting with his adamantium claws. Deals 137 damage and destroys 5 tiles in a 3x3 X-shaped pattern. Does not generate AP.",
+            "cout" : "8",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Destruction"}]
+        },
+        {
+            "nom" : "Surgical Strike",
+            "couleur" : "black",
+            "description" : "Wolverine attacks with ruthless precision, crippling his enemy's ability to retaliate. Destroys every tile in the enemy team's strongest color, dealing 55 damage per tile. Does not generate AP.",
+            "cout" : "11",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Destruction"}]
+        },
+        {
+            "nom" : "Recovery",
+            "couleur" : "yellow",
+            "description" : "Wolverine's healing factor repairs his wounds, and he ferociously lashes out if interrupted. Places a 3-turn Yellow Countdown tile that heals for 1187 damage when activated. If the Countdown tile is matched, Wolverine destroys 6 random tiles, dealing 55 damage per tile. Does not generate AP.",
+            "cout" : "9",
+            "type" : [{"Effet":"Degat"}, {"Effet":"Destruction"}, [{"Effet":"Piege"}, {"Effet":"Soin"}]]
+        }]
+    }
+]

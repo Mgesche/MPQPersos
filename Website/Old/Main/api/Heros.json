@@ -1,0 +1,31 @@
+[
+	{
+    "uid": "Iron Man (Model 35)",
+    "nom": "Iron Man (Model 35)",
+    "img": "http://vignette1.wikia.nocookie.net/marvelpuzzlequest/images/0/0b/Iron_Man_%28Model_35%29.png/revision/latest/scale-to-width/260?cb=20141030162043",
+    "puissance": "1",
+    "description": "Tony Stark is an inventor and industrialist, constantly working to improve his Iron Man armor, He inherited his multi-billion dollar company, Stark Industries, from his father Howard.",
+    "attaques" : [
+        {
+            "nom" : "Repulsor Blast",
+            "couleur" : "red",
+            "description" : "A high-impact kinetic blast from Iron Man's hand deals 63 damage to the target.",
+            "cout" : "10",
+            "type" : [{"Type":"Degat"}]
+        },
+        {
+            "nom" : "Armored Assault",
+            "couleur" : "yellow",
+            "description" : "Iron Man charges to the fore and positions his armor to shield his allies, creating 2 Protect tiles of strength X. From there he unleashes his weaponry, dealing 25 damage.",
+            "cout" : "8",
+            "type" : [{"Type":"Degat"}, {"Type":"Protection"}]
+        },
+        {
+            "nom" : "Ultra-Freon Beam",
+            "couleur" : "blue",
+            "description" : "A high-impact kinetic blast from Iron Man's hand deals 63 damage to the target.",
+            "cout" : "19",
+            "type" : [{"Type":"Degat"}]
+        }]
+    }
+]
