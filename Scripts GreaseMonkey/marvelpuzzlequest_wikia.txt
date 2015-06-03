@@ -15,36 +15,41 @@ var description = document.querySelector('#mw-content-text P').innerHTML;
 var urlImage = document.querySelector('.wikia-infobox-image img').src;
 
 var listTitrePower = document.querySelectorAll(".character-power h3 span b");
-var listCoutPower = document.querySelectorAll(".character-power P B");
-var listDescPower = document.querySelectorAll(".character-power P");
+var listCharPower = document.querySelectorAll(".character-power");
 
 var TitrePower1 = listTitrePower[0].innerHTML;
 var TitrePower2 = listTitrePower[1].innerHTML;
-var TitrePower3 = listTitrePower[2].innerHTML;
+if(listTitrePower.length > 2) {
+    var TitrePower3 = listTitrePower[2].innerHTML;
+}
 
-var CoutFull1 = listCoutPower[0].innerHTML;
+var CoutFull1 = listCharPower[0].querySelectorAll("P")[0].querySelectorAll("B")[0].innerHTML;
 var iDebCout1 = CoutFull1.indexOf("</noscript>")+"</noscript>".length;
 var Cout1 = CoutFull1.substring(iDebCout1).trim().replace(/&nbsp;/g, "");
 
-var CoutFull2 = listCoutPower[1].innerHTML;
+var CoutFull2 = listCharPower[1].querySelectorAll("P")[0].querySelectorAll("B")[0].innerHTML;
 var iDebCout2 = CoutFull2.indexOf("</noscript>")+"</noscript>".length;
 var Cout2 = CoutFull2.substring(iDebCout2).trim().replace(/&nbsp;/g, "");
 
-var CoutFull3 = listCoutPower[2].innerHTML;
+if(listTitrePower.length > 2) {
+var CoutFull3 = listCharPower[2].querySelectorAll("P")[0].querySelectorAll("B")[0].innerHTML;
 var iDebCout3 = CoutFull3.indexOf("</noscript>")+"</noscript>".length;
 var Cout3 = CoutFull3.substring(iDebCout3).trim().replace(/&nbsp;/g, "");
+}
 
-var DescFull1 = listDescPower[0].innerHTML;
+var DescFull1 = listCharPower[0].querySelectorAll("P")[0].innerHTML;
 var iDebDesc1 = DescFull1.indexOf(CoutFull1)+CoutFull1.length;
 var Desc1 = DescFull1.substring(iDebDesc1).replace("</b><br>", "");
 
-var DescFull2 = listDescPower[1].innerHTML;
+var DescFull2 = listCharPower[1].querySelectorAll("P")[0].innerHTML;
 var iDebDesc2 = DescFull2.indexOf(CoutFull2)+CoutFull2.length;
 var Desc2 = DescFull2.substring(iDebDesc2).replace("</b><br>", "");
 
-var DescFull3 = listDescPower[2].innerHTML;
-var iDebDesc3 = DescFull1.indexOf(CoutFull3)+CoutFull3.length;
-var Desc3 = DescFull1.substring(iDebDesc3).replace("</b><br>", "");
+if (listCharPower.length > 2) {
+    var DescFull3 = listCharPower[2].querySelectorAll("P")[0].innerHTML;
+    var iDebDesc3 = DescFull1.indexOf(CoutFull3)+CoutFull3.length;
+    var Desc3 = DescFull1.substring(iDebDesc3).replace("</b><br>", "");
+}
 
 var listClassPower = document.querySelectorAll(".character-power");
 
@@ -62,8 +67,8 @@ if (class1 == "character-power green") {
 if (class1 == "character-power blue") {
     couleur1 = "blue";
 }
-if (class1 == "character-power violet") {
-    couleur1 = "violet";
+if (class1 == "character-power purple") {
+    couleur1 = "purple";
 }
 if (class1 == "character-power black") {
     couleur1 = "black";
@@ -83,38 +88,41 @@ if (class2 == "character-power green") {
 if (class2 == "character-power blue") {
     couleur2 = "blue";
 }
-if (class2 == "character-power violet") {
-    couleur2 = "violet";
+if (class2 == "character-power purple") {
+    couleur2 = "purple";
 }
 if (class2 == "character-power black") {
     couleur2 = "black";
 }
 
-var class3 = listClassPower[2].className;
-var couleur3 = "";
-if (class3 == "character-power yellow") {
-    couleur3 = "yellow";
-}
-if (class3 == "character-power red") {
-    couleur3 = "red";
-}
-if (class3 == "character-power green") {
-    couleur3 = "green";
-}
-if (class3 == "character-power blue") {
-    couleur3 = "blue";
-}
-if (class3 == "character-power violet") {
-    couleur3 = "violet";
-}
-if (class3 == "character-power black") {
-    couleur3 = "black";
+if (listCharPower.length > 2) {
+    var class3 = listClassPower[2].className;
+    var couleur3 = "";
+    if (class3 == "character-power yellow") {
+        couleur3 = "yellow";
+    }
+    if (class3 == "character-power red") {
+        couleur3 = "red";
+    }
+    if (class3 == "character-power green") {
+        couleur3 = "green";
+    }
+    if (class3 == "character-power blue") {
+        couleur3 = "blue";
+    }
+    if (class3 == "character-power purple") {
+        couleur3 = "purple";
+    }
+    if (class3 == "character-power black") {
+        couleur3 = "black";
+    }
 }
 
 //var listPower2 = document.querySelectorAll(".character-power h3 span b")[1].innerHTML;
 
-var json = "";
-json =           "    \"uid\": \""+titre+"\",";
+var json = "{";
+
+json = json+"\n"+"    \"uid\": \""+titre+"\",";
 json = json+"\n"+"    \"nom\": \""+titre+"\",";
 json = json+"\n"+"    \"img\": \""+urlImage+"\",";
 json = json+"\n"+"    \"puissance\": \"???\",";
@@ -133,14 +141,18 @@ json = json+"\n"+"            \"couleur\" : \""+couleur2+"\",";
 json = json+"\n"+"            \"description\" : \""+Desc2+"\",";
 json = json+"\n"+"            \"cout\" : \""+Cout2+"\",";
 json = json+"\n"+"            \"type\" : \"Inconnu\",";
-json = json+"\n"+"        },";
+json = json+"\n"+"        }";
+if(listTitrePower.length > 2) {
+json = json+",";
 json = json+"\n"+"        {";
 json = json+"\n"+"            \"nom\" : \""+TitrePower3+"\",";
 json = json+"\n"+"            \"couleur\" : \""+couleur3+"\",";
 json = json+"\n"+"            \"description\" : \""+Desc3+"\",";
 json = json+"\n"+"            \"cout\" : \""+Cout3+"\",";
 json = json+"\n"+"            \"type\" : \"Inconnu\",";
-json = json+"\n"+"        }]";
+json = json+"\n"+"        }";
+}
+json = json+"]";
 json = json+"\n"+"    },";
 
 var resultJSON = document.createElement("TEXTAREA");
@@ -148,6 +160,3 @@ resultJSON.innerHTML = json;
 resultJSON.rows = 50;
 resultJSON.cols = 100;
 header.appendChild(resultJSON);
-
-//theContent = document.getElementById('WikiaPageHeader');
-//theContent.
